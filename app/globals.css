@@ -1,6 +1,63 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "leaflet/dist/leaflet.css";
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+}
 
+:root {
+  --background: #f7f6f3;
+  --foreground: #0b1e3d;
+  --border: #e2e0da;
+  --muted: #eeece6;
+  --muted-foreground: #6b6f76;
+  --accent: #fdf3e4;
+  --accent-foreground: #0b1e3d;
+  --popover: #ffffff;
+  --popover-foreground: #0b1e3d;
+  --primary: #c9a96e;
+  --primary-foreground: #0b1e3d;
+}
 
+.dark {
+  --background: #0b1220;
+  --foreground: #f5f5f5;
+  --border: #1f2937;
+  --muted: #111827;
+  --muted-foreground: #9ca3af;
+  --accent: rgba(201, 169, 110, 0.12);
+  --accent-foreground: #c9a96e;
+  --popover: #0f1e33;
+  --popover-foreground: #f5f5f5;
+  --primary: #c9a96e;
+  --primary-foreground: #0b1e3d;
+}
 
+/* zoom bottun in map */
+
+.leaflet-control-zoom {
+  border: none !important;
+}
+.leaflet-control-zoom a {
+  background-color: #0d1728 !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.leaflet-control-zoom a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.leaflet-control-attribution {
+  background-color: rgba(13, 23, 40, 0.8) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}

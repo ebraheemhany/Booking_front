@@ -1,0 +1,652 @@
+{
+  "TopBar": {
+    "login": "تسجيل الدخول",
+    "cairo": "القاهرة"
+  },
+  "Nav": {
+    "limousine": "ليموزين",
+    "fastTrack": "فاست تراك",
+    "stays": "إقامات"
+  },
+  "LanguageModal": {
+    "title": "اللغة والعملة",
+    "languageLabel": "اللغة",
+    "currencyLabel": "العملة",
+    "save": "حفظ",
+    "cancel": "إلغاء"
+  },
+  "SideMenu": {
+    "createAccount": "إنشاء حساب",
+    "login": "تسجيل الدخول"
+  },
+  "LanguageModal": {
+    "title": "اللغة والعملة",
+    "languageLabel": "اللغة",
+    "currencyLabel": "العملة",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "languages": {
+      "ar": "العربية",
+      "en": "الإنجليزية",
+      "ru": "الروسية",
+      "de": "الألمانية",
+      "es": "الإسبانية",
+      "uk": "الأوكرانية",
+      "pl": "البولندية"
+    },
+    "currencies": {
+      "USD": "دولار أمريكي",
+      "EGP": "جنيه مصري",
+      "SAR": "ريال سعودي",
+      "EUR": "يورو"
+    }
+  },
+  "SideMenu": {
+    "createAccount": "إنشاء حساب",
+    "login": "تسجيل الدخول"
+  },
+  "Nav": {
+    "limousine": "ليموزين",
+    "fastTrack": "فاست تراك",
+    "stays": "إقامات"
+  },
+
+  "Footer": {
+    "tagline": "مسار... كل رحلة لها حكاية",
+    "description": "مسار منصة ذكية لتأجير السيارات والرحلات السياحية، بتستخدم الذكاء الاصطناعي عشان تقترحلك أفضل رحلة تناسبك، وتوفرلك سيارتك المثالية بضغطة واحدة.",
+    "servicesTitle": "الخدمات",
+    "companyTitle": "الشركة",
+    "accountTitle": "الحساب",
+    "contactTitle": "تواصل معنا",
+    "home": "الرئيسية",
+    "aboutUs": "من نحن",
+    "contact": "تواصل معنا",
+    "signIn": "تسجيل الدخول",
+    "createAccount": "إنشاء حساب",
+    "myProfile": "ملفي الشخصي",
+    "phoneLabel": "الهاتف",
+    "emailLabel": "البريد الإلكتروني",
+    "addressLabel": "العنوان",
+    "paymentMethodsTitle": "طرق الدفع",
+    "languageTitle": "اللغة",
+    "copyright": "© 2026 مسار مصر. جميع الحقوق محفوظة.",
+    "developedBy": "تم التطوير بواسطة"
+  },
+
+  "HeroSections": {
+    "stays": {
+      "badge": "ليالي القاهرة — شريك الإقامات Masar",
+      "title": "الإقامات مِنْ",
+      "description": "فنادق وفلل وشقق منتقاة في كل أنحاء مصر — بإدارة Masar، وحجز في دقائق.",
+      "cta": "اكتشف الإقامات",
+      "imageAlt": "حمام سباحة فاخر بفندق في القاهرة",
+      "sidebarLabel": "الوجهات",
+      "featuredTitle": "Masar من الإقامات",
+      "featuredDescriptionPrefix": "إقامات مختارة بإدارة Masar ابتداءً من",
+      "featuredPriceUnit": "الليلة",
+      "categories": {
+        "cairo": { "title": "القاهرة", "description": "فنادق وشقق فندقية" },
+        "alexandria": {
+          "title": "الإسكندرية",
+          "description": "فنادق وشقق داخل المدينة"
+        },
+        "northCoast": {
+          "title": "الساحل الشمالي",
+          "description": "شاليهات وإقامات على الساحل"
+        }
+      },
+      "offerCommon": {
+        "badgeLabel": "Masar من الإقامات",
+        "ctaLabel": "احجز الآن",
+        "priceUnit": "الليلة"
+      }
+    },
+    "carRental": {
+      "badge": "أفضل عروض تأجير السيارات هذا الأسبوع",
+      "title": "تأجير السيارات مِنْ",
+      "description": "اختار سيارتك بضغطة واحدة، تأمين شامل، وتوصيل للباب.",
+      "cta": "اكتشف السيارات",
+      "imageAlt": "سيارة فاخرة معروضة للتأجير",
+      "sidebarLabel": "فئات السيارات",
+      "featuredTitle": "أفضل عروض الأسبوع",
+      "featuredDescriptionPrefix": "إقامات مختارة بإدارة Masar ابتداءً من",
+      "featuredPriceUnit": "الليلة",
+      "categories": {
+        "economy": {
+          "title": "اقتصادية",
+          "description": "مناسبة للتنقل داخل المدينة"
+        },
+        "family": { "title": "عائلية", "description": "7 ركاب فأكثر" },
+        "luxury": {
+          "title": "فاخرة",
+          "description": "سيارات مرسيدس وبي إم دبليو"
+        }
+      },
+      "offers": {
+        "hyundai": {
+          "badgeLabel": "أفضل عرض",
+          "subtitle": "أوتوماتيك · 5 ركاب"
+        },
+        "fortuner": {
+          "badgeLabel": "الأكثر طلبًا",
+          "subtitle": "أوتوماتيك · 7 ركاب"
+        },
+        "mercedes": { "badgeLabel": "فاخرة", "subtitle": "أوتوماتيك · 5 ركاب" },
+        "optra": { "badgeLabel": "اقتصادية", "subtitle": "مانيوال · 5 ركاب" }
+      },
+      "offerCommon": {
+        "ctaLabel": "احجز السيارة",
+        "priceUnit": "اليوم"
+      }
+    },
+    "travel": {
+      "badge": "خدمات السفر — من المطار وإليه",
+      "title": "رحلاتك تبدأ مِنْ",
+      "description": "استقبال وتوصيل من وإلى المطار، وحجز تذاكر الطيران بأفضل الأسعار.",
+      "cta": "احجز خدمتك",
+      "imageAlt": "صالة مطار وطائرة تستعد للإقلاع",
+      "sidebarLabel": "خدمات السفر",
+      "featuredTitle": "استقبال VIP من المطار",
+      "featuredDescriptionPrefix": "إقامات مختارة بإدارة Masar ابتداءً من",
+      "featuredPriceUnit": "الليلة",
+      "categories": {
+        "pickup": {
+          "title": "استقبال من المطار",
+          "description": "توصيل من المطار لأي مكان"
+        },
+        "dropoff": {
+          "title": "توصيل إلى المطار",
+          "description": "احجز موعدك ووصل في الوقت"
+        },
+        "tickets": {
+          "title": "حجز تذاكر الطيران",
+          "description": "أفضل الأسعار للرحلات الداخلية والدولية"
+        }
+      },
+      "offers": {
+        "cairoPickup": {
+          "badgeLabel": "الأكثر طلبًا",
+          "title": "استقبال من مطار القاهرة",
+          "subtitle": "سيارة خاصة · حتى 4 ركاب",
+          "ctaLabel": "احجز الاستقبال",
+          "priceUnit": "الرحلة"
+        },
+        "borgElArabDropoff": {
+          "badgeLabel": "سريع",
+          "title": "توصيل إلى مطار برج العرب",
+          "subtitle": "سيارة خاصة · حتى 4 ركاب",
+          "ctaLabel": "احجز التوصيل",
+          "priceUnit": "الرحلة"
+        },
+        "sharmTickets": {
+          "badgeLabel": "عرض خاص",
+          "title": "تذاكر طيران القاهرة - شرم الشيخ",
+          "subtitle": "ذهاب وعودة",
+          "ctaLabel": "احجز التذكرة",
+          "priceUnit": "التذكرة"
+        },
+        "dubaiTickets": {
+          "badgeLabel": "دولي",
+          "title": "تذاكر طيران القاهرة - دبي",
+          "subtitle": "ذهاب وعودة",
+          "ctaLabel": "احجز التذكرة",
+          "priceUnit": "التذكرة"
+        }
+      }
+    }
+  },
+  "TravelHero": {
+    "eyebrow": "من المطار إلى إقامتك",
+    "titleLine1": "رحلتك كلها",
+    "titleHighlight": "بحجز واحد",
+    "description": "تنقلاتك من المطار وإلى المطار داخل مصر، وصولك إلى حيث تريد — نرتب لك كل شيء قبل أن تصل.",
+    "cta": "احجز رحلتك",
+    "sinceStat": "منذ 2025 - أكثر من 11,000 ضيف في ضيافتنا",
+    "services": {
+      "airportPickup": "استقبال ومسار سريع في مطار القاهرة",
+      "privateDriver": "سائقك الخاص — محترف ويتحدث الإنجليزية",
+      "curatedStays": "إقامات مختارة بعناية من EasyRent",
+      "singlePayment": "تأكيد واحد ومبلغ واحد"
+    }
+  },
+
+  "BlogSection": {
+    "eyebrow": "دليلك ومقالاتنا",
+    "title": "من مدونة مسار",
+    "readAll": "اقرأ كل المقالات",
+    "readGuide": "اقرأ الدليل",
+    "posts": {
+      "roadTrip": {
+        "badge": "رحلات برية",
+        "title": "دليل رحلة السيارة من القاهرة إلى العلمين",
+        "description": "الطريق الساحلي يستحق التوقف لا العبور السريع. هذا الدليل الذي نجهزه فعليًا لضيوفنا — أفضل محطات الاستراحة، والمطاعم على الطريق، ووقت الوصول الأمثل..."
+      },
+      "carGuide": {
+        "badge": "دليل السيارات",
+        "title": "أي فئة سيارة تختار حسب رحلتك",
+        "description": "اختيار السيارة يبدأ من طبيعة الرحلة لا من المظهر. هذا الدليل يوضح متى تحتاج دفع رباعي، ومتى تكفيك سيارة اقتصادية، ومتى الفارق فعليًا في الراحة لا السرعة..."
+      },
+      "airportGuide": {
+        "badge": "دليل السفر",
+        "title": "التأشيرة الرقمية لمصر 2026: كل ما يخص وصولك عبر المطار",
+        "description": "إذا كنت مسافرًا عبر مطار القاهرة الدولي، فتجربة وصولك تغيرت. التأشيرة الرقمية الجديدة تحل محل الملصق الورقي برمز QR آمن، وهذا الدليل يوضح كل خطوة..."
+      }
+    },
+    "dates": {
+      "roadTrip": "١٢ يوليو ٢٠٢٦",
+      "carGuide": "٢٠ يوليو ٢٠٢٦",
+      "airportGuide": "٤ أغسطس ٢٠٢٦"
+    }
+  },
+  "SignInBanner": {
+    "eyebrow": "الأعضاء يوفرون أكثر",
+    "titleLine1": "سجّل دخولك ووفّر",
+    "titlePercent": "10%",
+    "description": "أنشئ حسابك أو سجّل دخولك لفتح كود WELCOME10 — خصم 10% على أول حجز ليموزين.",
+    "useCodeLabel": "استخدم الكود",
+    "createAccount": "إنشاء حساب",
+    "signIn": "تسجيل الدخول",
+    "copied": "تم النسخ"
+  },
+  "NightsHero": {
+    "title": "كل رحلة لها حكاية",
+    "description": "من استقبالك عند بوابة المطار إلى سيارتك وإقامتك — مسار يرتب رحلتك كاملة قبل أن تصل.",
+    "chatWithUs": "تحدث معنا",
+    "trustedBy": "موثوق به من أكثر من 10,000 مسافر",
+    "followUs": "تابعنا"
+  },
+  "FaqSection": {
+    "title": "أسئلة يسألها الجميع قبل الحجز",
+    "questions": {
+      "howToBook": {
+        "q": "إزاي أحجز رحلة أو أستأجر عربية من مسار؟",
+        "a": "من الصفحة الرئيسية، اختار القسم اللي يناسبك — إقامات، تأجير سيارات، أو خدمات سفر — وهتلاقي كل العروض جاهزة للحجز المباشر بضغطة واحدة."
+      },
+      "aiTripPlanner": {
+        "q": "إيه ميزة التخطيط الذكي بالذكاء الاصطناعي؟",
+        "a": "مسار بيقترحلك رحلة كاملة (فندق + سيارة + جدول زيارات) مبنية على وقتك وميزانيتك، بدل ما تدور وتقارن بنفسك بين عشرات المواقع."
+      },
+      "airportPickup": {
+        "q": "بتوفروا استقبال من مطار القاهرة؟",
+        "a": "أيوه، سائق خاص بيستقبلك من بوابة الوصول مباشرة ويوصلك لفندقك أو أي مكان تحدده — الحجز والدفع من قبل ما تسافر."
+      },
+      "carClasses": {
+        "q": "فيه فئات سيارات مختلفة أختار منها؟",
+        "a": "من الاقتصادية للتنقل داخل المدينة، للعائلية اللي بتاخد 7 ركاب، لحد الفاخرة زي مرسيدس وبي إم دبليو — كله بتأمين شامل."
+      },
+      "hireDriver": {
+        "q": "أقدر أستأجر سائق خاص باليوم أو بالأسبوع؟",
+        "a": "أيوه، تقدر تحجز سائق خاص لمدة يوم أو أسبوع كامل حسب برنامج رحلتك، مع مرونة في تغيير الوجهة أو المواعيد."
+      },
+      "englishDrivers": {
+        "q": "السائقين بيتكلموا إنجليزي وبينظموا جولات يومية؟",
+        "a": "أيوه، سائقينا مدربين على التعامل مع الزوار الأجانب، وممكن ننظملك جولة يوم كامل لأي وجهة سياحية تحددها."
+      },
+      "flightTickets": {
+        "q": "بتحجزوا تذاكر طيران داخلية ودولية؟",
+        "a": "أيوه، تقدر تحجز تذاكر الطيران للرحلات الداخلية والدولية من نفس المنصة، بأسعار منافسة ومن غير ما تدور على موقع تاني."
+      },
+      "northCoastTrips": {
+        "q": "أقدر أحجز رحلة من القاهرة للساحل الشمالي؟",
+        "a": "أيوه، تقدر تحجز سيارة أو سائق خاص لرحلة القاهرة–الساحل الشمالي، مع محطات استراحة مقترحة على الطريق."
+      },
+      "trustScore": {
+        "q": "إزاي أتأكد إن حالة السيارة كويسة قبل الاستلام؟",
+        "a": "كل سيارة عندها Trust Score مبني على تحليل صور فعلي لحالتها، فتقدر تشوف تقييم واضح قبل ما تأكد الحجز."
+      },
+      "arabicSupport": {
+        "q": "فيه دعم بالعربي لزوار الخليج؟",
+        "a": "أيوه، فريق الدعم والسائقين بيتعاملوا بالعربي بطلاقة، وكل تفاصيل الحجز والدفع متاحة بلغتك من الأول."
+      }
+    }
+  },
+
+  "TestimonialsSection": {
+    "eyebrow": "آراء عملائنا",
+    "title": "رحلة يثق بها عملاؤنا",
+    "footerNote": "تقييمات حقيقية من عملائنا على جوجل — الأسماء كما ظهرت، وتم تعديل الإملاء البسيط فقط عند الحاجة.",
+    "reviews": {
+      "sara": {
+        "name": "سارة محمود",
+        "date": "يناير ٢٠٢٦",
+        "text": "حجزت سيارة مع سائق لمدة أسبوع كامل، والتنظيم كان ممتاز من أول لحظة. السائق محترف وبيتكلم إنجليزي كويس، ونصحنا بأماكن رهيبة مكناش نعرفها."
+      },
+      "ahmed": {
+        "name": "أحمد رضا",
+        "date": "ديسمبر ٢٠٢٥",
+        "text": "استخدمت خدمة الاستقبال من مطار القاهرة، والسائق كان في انتظاري بالظبط في الوقت. الحجز والدفع كله كان سهل جدًا من الموقع."
+      },
+      "layla": {
+        "name": "ليلى حسن",
+        "date": "ديسمبر ٢٠٢٥",
+        "text": "خدمة رائعة. استخدمت ميزة التخطيط الذكي فاقترحلي رحلة كاملة (فندق وسيارة) في دقائق. وفرت عليّا وقت كبير في المقارنة بنفسي."
+      },
+      "khalid": {
+        "name": "خالد العتيبي",
+        "date": "أكتوبر ٢٠٢٥",
+        "text": "من أفضل الشركات اللي تعاملت معاها في مصر. الفندق اللي حجزته كان مطابق تمامًا للوصف، والدعم بالعربي سهّل كل حاجة."
+      },
+      "andrew": {
+        "name": "أندرو أليكسان",
+        "date": "يونيو ٢٠٢٥",
+        "text": "خدمة ممتازة، السيارات وصلت في الميعاد وفيه تشكيلة كويسة بأسعار مناسبة. بأنصح بيهم لأي حد عايز رحلة منظمة في مصر."
+      }
+    }
+  },
+  "SearchBar": {
+    "tripType": "نوع المشوار",
+    "tripTypePlaceholder": "من المطار",
+    "tripTypeFromAirport": "من المطار",
+    "tripTypeToAirport": "إلى المطار",
+    "airport": "المطار",
+    "airportPlaceholder": "اختار المطار",
+    "destination": "موقع التوصيل",
+    "destinationPlaceholder": "ابحث عن موقع...",
+    "date": "متى؟",
+    "datePlaceholder": "اختار التاريخ",
+    "time": "الوقت",
+    "timePlaceholder": "أي وقت",
+    "passengers": "الركاب والأمتعة",
+    "passengersUnit": "راكب",
+    "search": "اعرض السيارات",
+    "chooseTime": "اختر الوقت",
+    "confirm": "تأكيد",
+    "cancel": "إلغاء",
+    "am": "ص",
+    "pm": "م",
+    "passengersAndLuggage": "الركاب والأمتعة",
+    "passengersLabel": "الركاب",
+    "luggageLabel": "الأمتعة",
+    "useCurrentLocation": "استخدام الموقع الحالي",
+    "chooseFromMap": "اختيار من الخريطة",
+    "tripTypePrivate": "مشوار خاص",
+    "tripTypeDailyRental": "إيجار يومي",
+    "locating": "بيحدد موقعك...",
+    "locationDenied": "مقدرناش نحدد موقعك، اتأكد إن صلاحية الموقع مفعّلة",
+    "locationNotSupported": "المتصفح ده مش بيدعم تحديد الموقع",
+    "confirmLocation": "تأكيد الموقع",
+    "departureLocation": "موقع المغادرة",
+    "dropoffLocation": "موقع التوصيل",
+    "airports": {
+      "hbe": "برج العرب",
+      "cai": "القاهرة",
+      "hrg": "الغردقة",
+      "aac": "العلمين",
+      "mum": "مرسى مطروح",
+      "ssh": "شرم الشيخ"
+    }
+  },
+
+  "HeroLimousine": {
+    "tagline": "ايجار ليموزين بسائق خاص · ليلاً ونهاراً",
+    "title": "ايجار ليموزين مع سائق في مصر",
+    "description": "توصيل من وإلى المطار، رحلات يومية وخدمات سياحية مميزة"
+  },
+  "HeroFastTrack": {
+    "tagline": "مطار القاهرة الدولي (CAI) · وصول ومغادرة",
+    "title": "المسار السريع في مطار القاهرة",
+    "description": "تخطَّ طوابير المطار: يستقبلك مرافق شخصي عند باب الطائرة ويرافقك عبر الجوازات والتأشيرة والأمتعة."
+  },
+  "HeroStays": {
+    "tagline": "إقامات من مسار",
+    "title": "خطوات واثقة.. لإقامة لا تُنسى",
+    "description": "حدات سكنية تُدار بعناية مسار الخاصة، ومساحات استجمام وملاذات مفضلة ننتقيها بعين الخبير — نرتب كافة أدق التفاصيل لتبدأ رحلتك بلا مجهود.\nبعض الإقامات تحت إشرافنا المباشر، والبعض الآخر نختاره بذات الشغف والحرص. تخطيطك، وتأكيدك، ورعايتك... كل خطوة مؤمنة وميسرة عبر مسار."
+  },
+  "Filters": {
+    "filters": "الفلاتر",
+    "sortFeatured": "مميزة",
+    "sortPriceLow": "السعر: من الأقل",
+    "sortPriceHigh": "السعر: من الأعلى",
+    "sortRating": "الأعلى تقييمًا",
+    "priceByTrip": "التسعير حسب المشوار",
+    "allPrices": "كل الأسعار",
+    "arrivalTrip": "مشوار الوصول",
+    "departureTrip": "مشوار المغادرة",
+    "privateTrip": "مشوار خاص",
+    "dailyRentalTrip": "إيجار يومي",
+    "carCategory": "فئة السيارة",
+    "categoryAll": "الكل",
+    "categoryVip": "VIP فاخر 4",
+    "categoryStandard": "ستاندرد 4",
+    "categoryFamily": "عائلي 5",
+    "categoryComfort": "كومفورت 8",
+    "accessibility": "إمكانية الوصول",
+    "wheelchairAccessible": "مجهزة للكراسي المتحركة",
+    "budget": "الميزانية",
+    "resetBudget": "إعادة الضبط",
+    "clearAllFilters": "مسح كل الفلاتر",
+    "showCars": "عرض {count} سيارة",
+    "noResults": "مفيش سيارات متاحة بالمواصفات دي، جرّب تغيّر الفلاتر"
+  },
+  "CarCard": {
+    "viewSpecs": "عرض المواصفات",
+    "seatsCount": "{count} مقاعد",
+    "luggageCount": "{count} حقائب",
+    "privateDriver": "سائق خاص",
+    "priceUnitHourly": "EGP {hours} ساعة / {km} كم",
+    "priceUnit_arrival": "لمشوار الوصول",
+    "priceUnit_departure": "لمشوار المغادرة",
+    "priceUnit_private": "للمشوار الخاص",
+    "priceUnit_dailyRental": "للإيجار اليومي",
+    "priceUnavailable": "السعر غير متاح حاليًا",
+    "bookNow": "احجز الآن"
+  },
+  "CarDetails": {
+    "perDay": "لليوم",
+    "startingFrom": "من",
+    "bookedCount": "تم الحجز {count} مرة",
+    "specs": "المواصفات",
+    "luggage": "الأمتعة",
+    "seats": "الركاب",
+    "driver": "السائق",
+    "driverIncluded": "يشمل سائق",
+    "driverNotIncluded": "بدون سائق",
+    "category": "الفئة",
+    "bookThisCar": "احجز هذه السيارة",
+    "mostRequested": "الأكثر طلبًا",
+    "note": "نبذة"
+  },
+  "Booking": {
+    "stepTrip": "رحلتك",
+    "stepChooseCar": "اختر سيارتك",
+    "stepCarDetails": "تفاصيل الرحلة",
+    "stepReview": "راجع وأكّد",
+    "selectedCar": "سيارتك المختارة",
+    "tripArrival": "مشوار الوصول",
+    "tripArrivalDesc": "في استقبالك عند الوصول، لحد إلى باب عنوانك",
+    "tripDeparture": "مشوار المغادرة",
+    "tripDepartureDesc": "نوصلك في موعدك إلى صالة السفر",
+    "tripPrivate": "مشوار خاص",
+    "tripPrivateDesc": "من نقطة إلى نقطة — داخل القاهرة أو بين المدن مع سائقك الخاص",
+    "tripDailyRental": "إيجار يومي",
+    "tripDailyRentalDesc": "سيارة وسائق خاص رهن إشارتك طوال اليوم",
+    "dateAndTime": "التاريخ والوقت",
+    "addTime": "أضف الوقت",
+    "addDate": "أضف التاريخ",
+    "luggage": "الأمتعة",
+    "passengers": "الركاب",
+    "next": "التالي",
+    "routePreview": "معاينة المسار",
+    "routePlaceholder": "مسارك",
+    "distanceKm": "{km} كم",
+    "completeTripToSeeRoute": "أكمل رحلتك لعرض المسار",
+    "passengersCount": "{count} الركاب",
+    "pointAirport": "المطار",
+    "pointDestination": "وجهتك",
+    "pointPickup": "موقع الانطلاق",
+    "pointStart": "نقطة البداية",
+    "pointEnd": "نقطة النهاية",
+    "estimatedDistance": "المسافة التقديرية",
+    "pointA": "نقطة البداية",
+    "pointB": "نقطة النهاية",
+    "back": "رجوع",
+    "confirmBooking": "تأكيد الحجز",
+    "confirming": "جاري التأكيد...",
+    "totalPrice": "السعر الإجمالي",
+    "luggageCount": "{count} حقائب",
+    "selectSuitableCar": "من فضلك اختر العربية المناسبة"
+  },
+  "Payment": {
+    "title": "إتمام الدفع",
+    "subtitle": "أدخل تفاصيل الدفع لتأكيد حجزك",
+    "amountDue": "المبلغ المستحق",
+    "choosePaymentMethod": "اختر طريقة الدفع",
+    "payByCard": "بطاقة ائتمان",
+    "payByCardDesc": "فيزا، ماستركارد",
+    "payByWallet": "محفظة إلكترونية",
+    "payByWalletDesc": "فودافون كاش، إنستاباي",
+    "payByCash": "الدفع عند الاستلام",
+    "payByCashDesc": "ادفع نقدًا للسائق",
+    "cardNumber": "رقم البطاقة",
+    "cardholderName": "اسم حامل البطاقة",
+    "cardholderNamePlaceholder": "الاسم كما هو على البطاقة",
+    "expiry": "تاريخ الانتهاء",
+    "walletInstructions": "بعد تأكيد الدفع، هتوصلك رسالة على رقمك لإتمام الدفع عن طريق المحفظة",
+    "cashInstructions": "هتدفع المبلغ نقدًا للسائق عند بداية الرحلة",
+    "securePaymentNote": "بياناتك محمية بالكامل — لا نقوم بتخزين تفاصيل بطاقتك",
+    "payNow": "ادفع الآن",
+    "processing": "جاري المعالجة..."
+  },
+  "StaySearch": {
+    "whereTo": "أين توّد الإقامة؟ ",
+    "anywhere": "أي مكان",
+    "searchPlaceholder": "ابحث بالمكان أو اسم الفندق أو الإقامة",
+    "popularDestinations": "وجهات رائجة",
+    "destinations": {
+      "giza": { "name": "الجيزة", "subtitle": "الأهرامات وأبو الهول" },
+      "cairo": { "name": "القاهرة", "subtitle": "10 إقامات" },
+      "northCoast": { "name": "الساحل الشمالي", "subtitle": "شواطئ ومصايف" },
+      "alexandria": { "name": "الإسكندرية", "subtitle": "عروس البحر المتوسط" },
+      "marsaMatrouh": { "name": "مرسى مطروح", "subtitle": "شواطئ رملية" },
+      "elGouna": { "name": "الجونة", "subtitle": "منتجعات البحر الأحمر" },
+      "elDabaa": { "name": "الضبعة", "subtitle": "الساحل الشمالي الغربي" }
+    },
+    "when": "متى ستسافر؟",
+    "selectDates": "اختر تواريخك",
+    "today": "اليوم",
+    "tomorrow": "غدًا",
+    "weekend": "نهاية الأسبوع",
+    "nightsCount": "{count, plural, one {ليلة واحدة} other {# ليالٍ}}",
+    "confirmNights": "تأكيد – {count, plural, one {ليلة واحدة} other {# ليالٍ}}",
+    "guests": "عدد الضيوف",
+    "guestsCount": "{count} ضيوف",
+    "adults": "بالغون",
+    "adultsHint": "18 عامًا وأكثر",
+    "children": "أطفال",
+    "childrenHint": "من 0 إلى 17 عامًا",
+    "childrenPriceNote": "يحاسب الأطفال بأسعار البالغين حاليًا",
+    "confirm": "تأكيد",
+    "search": "ابحث"
+  },
+  "Hotels": {
+    "perNight": "لليلة",
+    "roomTypeHotel": "فندق",
+    "roomTypeApartment": "شقة",
+    "roomTypeStudio": "ستوديو",
+    "roomTypeVilla": "فيلا",
+    "roomTypeResort": "منتجع",
+    "roomTypeChalet": "شاليه",
+    "refineResults": "تحسين النتائج",
+    "starRating": "تصنيف النجوم",
+    "roomType": "نوع الإقامة",
+    "amenities": "المرافق",
+    "amenity_luggageRoom": "غرفة أمتعة",
+    "amenity_liftAccess": "مصعد",
+    "amenity_checkoutHour": "ميعاد المغادرة",
+    "amenity_checkinHour": "ميعاد الوصول",
+    "amenity_hotelSafe": "خزنة",
+    "amenity_breakfast": "إفطار",
+    "amenity_reception24": "استقبال 24 ساعة",
+    "amenity_restaurant": "مطعم",
+    "clearAll": "مسح الكل",
+    "showResults": "عرض النتائج ({count})",
+    "filter": "تصفية",
+    "sort_featured": "المميزة أولاً",
+    "sort_priceLow": "الأقل سعرًا",
+    "sort_priceHigh": "الأعلى سعرًا",
+    "stayCount": "{count} إقامة",
+    "noResults": "لا توجد نتائج",
+    "tabRooms": "الغرف",
+    "tabFacilities": "المرافق",
+    "tabPhotos": "الصور",
+    "viewAllPhotos": "عرض كل الصور ({count})",
+    "roomMeta": "{size} م² · {bed} · يتسع لـ {guests}",
+    "basePriceLabel": "السعر الأساسي",
+    "breakfastPriceLabel": "شامل الإفطار",
+    "payAtCheckIn": "يُدفع عند إتمام الحجز",
+    "freeCancellation": "إلغاء مجاني حتى موعد الوصول",
+    "noFreeCancellation": "لا يوجد إلغاء مجاني لهذه التواريخ",
+    "select": "اختيار",
+    "selected": "تم الاختيار",
+    "startingFrom": "ابتداءً من",
+    "chooseRoom": "اختر غرفة",
+    "selectRoomFirst": "اختر غرفة أولاً",
+    "noChargeYet": "لن يتم خصم أي مبلغ الآن",
+    "contactConcierge": "تحدث إلى الكونسيرج عبر واتساب",
+    "guestsSummary": "{adults} بالغين، {children} أطفال",
+    "nightsCount": "{count, plural, =1 {ليلة واحدة} =2 {ليلتان} few {# ليالٍ} many {# ليلة} other {# ليلة}}"
+  },
+  "Checkout": {
+    "pageTitle": "خطوة وحدة تفصلك عن رحلتك",
+
+    "guestDetailsTitle": "بيانات صاحب الحجز",
+    "guestDetailsSubtitle": "بيانات صاحب الحجز الرئيسي — هنرسل تفاصيل الحجز عليها",
+
+    "firstName": "الاسم الأول",
+    "firstNamePlaceholder": "مثال: أحمد",
+    "lastName": "اسم العائلة",
+    "lastNamePlaceholder": "مثال: محمد",
+
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "example@email.com",
+    "emailHint": "هنرسل تأكيد الحجز على هذا البريد",
+
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "1xx xxx xxxx",
+    "countryEgypt": "مصر",
+    "countrySaudi": "السعودية",
+    "countryUAE": "الإمارات",
+
+    "country": "الدولة",
+    "selectCountry": "اختر دولتك",
+    "searchCountry": "ابحث عن دولة...",
+    "mostSelected": "الأكثر اختيارًا",
+    "loadingCountries": "جارٍ تحميل الدول...",
+
+    "masarGuarantee": "محجوز ومؤمّن عبر مسار",
+    "checkIn": "الوصول",
+    "checkOut": "المغادرة",
+    "nightsAndRoom": "{nights} ليالٍ · {room}",
+    "total": "الإجمالي",
+    "confirmBooking": "تأكيد الحجز",
+    "confirming": "جارٍ التأكيد...",
+    "noChargeYet": "لن يتم خصم أي مبلغ الآن",
+    "contactConcierge": "تحدث إلى الكونسيرج عبر واتساب",
+    "bookingConfirmedTitle": "تم تأكيد حجزك بنجاح",
+    "bookingRef": "رقم الحجز: {ref}",
+    "noConfirmedBooking": "لا يوجد حجز مؤكد لعرضه",
+    "backToSearch": "الرجوع للبحث",
+    "guests": "الضيوف",
+    "downloadReceipt": "تحميل الإيصال",
+    "backToHome": "العودة للرئيسية"
+  },
+  "countries": {
+    "EG": "مصر",
+    "SA": "المملكة العربية السعودية",
+    "AE": "الإمارات العربية المتحدة",
+    "KW": "الكويت",
+    "QA": "قطر",
+    "BH": "البحرين",
+    "OM": "عمان",
+    "JO": "الأردن",
+    "LB": "لبنان",
+    "IQ": "العراق",
+    "MA": "المغرب",
+    "TN": "تونس",
+    "DZ": "الجزائر",
+    "LY": "ليبيا",
+    "SD": "السودان",
+    "US": "الولايات المتحدة",
+    "GB": "المملكة المتحدة"
+  }
+}

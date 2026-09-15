@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import google from "@/public/logo/google.png";
-import facebook from "@/public/logo/facebook.png";
-import snabchat from "@/public/logo/snapchat.png";
-import tiktok from "@/public/logo/tiktok.png";
+import google from "@/public/icons/google.png";
+import facebook from "@/public/icons/facebook.png";
+import snabchat from "@/public/icons/snapchat.png";
+import tiktok from "@/public/icons/tiktok.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 const logos = [

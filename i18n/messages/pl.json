@@ -1,0 +1,654 @@
+{
+  "TopBar": {
+    "login": "Zaloguj się",
+    "cairo": "Kair"
+  },
+  "Nav": {
+    "limousine": "Limuzyn",
+    "fastTrack": "Fast Track",
+    "stays": "Pobyt"
+  },
+  "LanguageModal": {
+    "title": "Język i waluta",
+    "languageLabel": "Język",
+    "currencyLabel": "Waluta",
+    "save": "Zapisz",
+    "cancel": "Anulowanie",
+    "languages": {
+      "ar": "Język arabski",
+      "en": "angielski",
+      "ru": "rosyjski",
+      "de": "język niemiecki",
+      "es": "hiszpański",
+      "uk": "ukraiński",
+      "pl": "język polski"
+    },
+    "currencies": {
+      "USD": "dolar amerykański",
+      "EGP": "funt egipski",
+      "SAR": "riyal saudyjski",
+      "EUR": "euro"
+    }
+  },
+  "SideMenu": {
+    "createAccount": "Załóż konto",
+    "login": "Zaloguj się"
+  },
+  "Footer": {
+    "tagline": "Trasa… Każda podróż ma swoją historię",
+    "description": "Inteligentna platforma do wynajmu samochodów i rezerwacji wycieczek turystycznych, która wykorzystuje sztuczną inteligencję, aby zaproponować Ci najlepszą wycieczkę dostosowaną do Twoich potrzeb i zapewnić idealny samochód za pomocą jednego kliknięcia.",
+    "servicesTitle": "Usługi",
+    "companyTitle": "Firma",
+    "accountTitle": "Konto",
+    "contactTitle": "Skontaktuj się z nami",
+    "home": "Strona główna",
+    "aboutUs": "O nas",
+    "contact": "Skontaktuj się z nami",
+    "signIn": "Zaloguj się",
+    "createAccount": "Załóż konto",
+    "myProfile": "Mój profil",
+    "phoneLabel": "Telefon",
+    "emailLabel": "Adres e-mail",
+    "addressLabel": "Tytuł",
+    "paymentMethodsTitle": "Formy płatności",
+    "languageTitle": "Język",
+    "copyright": "© 2026 Masar Misr. Wszelkie prawa zastrzeżone.",
+    "developedBy": "Opracowano przez"
+  },
+  "HeroSections": {
+    "stays": {
+      "badge": "Noce w Kairze — partner w zakresie zakwaterowania Masar",
+      "title": "Pobyt od",
+      "description": "Wyselekcjonowane hotele, wille i apartamenty w całym Egipcie — zarządzane przez Masar, rezerwacja w kilka minut.",
+      "cta": "Odkryj oferty zakwaterowania",
+      "imageAlt": "Luksusowy basen w hotelu w Kairze",
+      "sidebarLabel": "Miejsca docelowe",
+      "featuredTitle": "Masar – zakwaterowanie",
+      "featuredDescriptionPrefix": "Wybrane oferty zakwaterowania od firmy Masar, ceny zaczynają się od",
+      "featuredPriceUnit": "Dzisiaj wieczorem",
+      "categories": {
+        "cairo": {
+          "title": "Kair",
+          "description": "Hotele i apartamenty hotelowe"
+        },
+        "alexandria": {
+          "title": "Aleksandria",
+          "description": "Hotele i apartamenty w centrum miasta"
+        },
+        "northCoast": {
+          "title": "Północne wybrzeże",
+          "description": "Domki letniskowe i zakwaterowanie na wybrzeżu"
+        }
+      },
+      "offerCommon": {
+        "badgeLabel": "Masar – zakwaterowanie",
+        "ctaLabel": "Zarezerwuj teraz",
+        "priceUnit": "Dzisiaj wieczorem"
+      }
+    },
+    "carRental": {
+      "badge": "Najlepsze oferty wynajmu samochodów w tym tygodniu",
+      "title": "Wynajem samochodów od",
+      "description": "Wybierz samochód jednym kliknięciem, pełne ubezpieczenie i dostawa pod same drzwi.",
+      "cta": "Odkryj samochody",
+      "imageAlt": "Luksusowy samochód do wynajęcia",
+      "sidebarLabel": "Kategorie samochodów",
+      "featuredTitle": "Najlepsze oferty tygodnia",
+      "featuredDescriptionPrefix": "Wybrane oferty zakwaterowania od firmy Masar, ceny od",
+      "featuredPriceUnit": "Dzisiaj wieczorem",
+      "categories": {
+        "economy": {
+          "title": "Gospodarka",
+          "description": "Idealne do poruszania się po mieście"
+        },
+        "family": {
+          "title": "Rodzinne",
+          "description": "7 pasażerów i więcej"
+        },
+        "luxury": {
+          "title": "Luksusowa",
+          "description": "Samochody Mercedes i BMW"
+        }
+      },
+      "offers": {
+        "hyundai": {
+          "badgeLabel": "Najlepsza oferta",
+          "subtitle": "Automat · 5 pasażerów"
+        },
+        "fortuner": {
+          "badgeLabel": "Najczęściej wyszukiwane",
+          "subtitle": "Automat · 7 pasażerów"
+        },
+        "mercedes": {
+          "badgeLabel": "Luksusowa",
+          "subtitle": "Automat · 5 pasażerów"
+        },
+        "optra": {
+          "badgeLabel": "Gospodarka",
+          "subtitle": "Manual · 5 pasażerów"
+        }
+      },
+      "offerCommon": {
+        "ctaLabel": "Zarezerwuj samochód",
+        "priceUnit": "Dzisiaj"
+      }
+    },
+    "travel": {
+      "badge": "Usługi turystyczne — transport z lotniska i na lotnisko",
+      "title": "Twoje podróże zaczynają się od",
+      "description": "Odbiór i transport z lotniska oraz na lotnisko, a także rezerwacja biletów lotniczych w najlepszych cenach.",
+      "cta": "Zarezerwuj usługę",
+      "imageAlt": "Hala lotniska i samolot przygotowujący się do startu",
+      "sidebarLabel": "Usługi turystyczne",
+      "featuredTitle": "Odbiór VIP z lotniska",
+      "featuredDescriptionPrefix": "Wybrane oferty zakwaterowania organizowane przez Masar, ceny od",
+      "featuredPriceUnit": "Dzisiaj wieczorem",
+      "categories": {
+        "pickup": {
+          "title": "Odbiór z lotniska",
+          "description": "Przejazd z lotniska do dowolnego miejsca"
+        },
+        "dropoff": {
+          "title": "Przejazd na lotnisko",
+          "description": "Zarezerwuj termin i przyjdź punktualnie"
+        },
+        "tickets": {
+          "title": "Rezerwacja biletów lotniczych",
+          "description": "Najlepsze ceny na loty krajowe i międzynarodowe"
+        }
+      },
+      "offers": {
+        "cairoPickup": {
+          "badgeLabel": "Najczęściej wyszukiwane",
+          "title": "Odbiór z lotniska w Kairze",
+          "subtitle": "Samochód prywatny · do 4 pasażerów",
+          "ctaLabel": "Zarezerwuj przyjęcie",
+          "priceUnit": "Podróż"
+        },
+        "borgElArabDropoff": {
+          "badgeLabel": "Szybki",
+          "title": "Przejazd na lotnisko Burj Al-Arab",
+          "subtitle": "Samochód prywatny · do 4 pasażerów",
+          "ctaLabel": "Zarezerwuj dostawę",
+          "priceUnit": "Podróż"
+        },
+        "sharmTickets": {
+          "badgeLabel": "Oferta specjalna",
+          "title": "Bilety lotnicze Kair – Szarm el-Szejk",
+          "subtitle": "W obie strony",
+          "ctaLabel": "Zarezerwuj bilet",
+          "priceUnit": "Bilet"
+        },
+        "dubaiTickets": {
+          "badgeLabel": "międzynarodowy",
+          "title": "Bilety lotnicze Kair – Dubaj",
+          "subtitle": "W obie strony",
+          "ctaLabel": "Zarezerwuj bilet",
+          "priceUnit": "Bilet"
+        }
+      }
+    }
+  },
+  "TravelHero": {
+    "eyebrow": "Z lotniska do miejsca zakwaterowania",
+    "titleLine1": "Cała Twoja podróż",
+    "titleHighlight": "W ramach jednej rezerwacji",
+    "description": "Przejazdy z lotniska i na lotnisko w obrębie Egiptu, dotarcie do wybranego miejsca — wszystko zorganizujemy dla Ciebie jeszcze przed Twoim przyjazdem.",
+    "cta": "Zarezerwuj lot",
+    "sinceStat": "Od 2025 r. – ponad 11 000 gości u nas",
+    "services": {
+      "airportPickup": "Odbiór i przyspieszona procedura na lotnisku w Kairze",
+      "privateDriver": "Twój prywatny kierowca — profesjonalista, mówiący po angielsku",
+      "curatedStays": "Starannie wyselekcjonowane obiekty noclegowe od EasyRent",
+      "singlePayment": "Jedno potwierdzenie i jedna kwota"
+    }
+  },
+  "BlogSection": {
+    "eyebrow": "Twój przewodnik i nasze artykuły",
+    "title": "Z bloga „Masar”",
+    "readAll": "Przeczytaj wszystkie artykuły",
+    "readGuide": "Zapoznaj się z instrukcją",
+    "posts": {
+      "roadTrip": {
+        "badge": "Wycieczki samochodowe",
+        "title": "Przewodnik po podróży samochodem z Kairu do Al-Alamin",
+        "description": "Trasa wzdłuż wybrzeża zasługuje na to, by się na niej zatrzymać, a nie tylko szybko przejechać. Oto przewodnik, który właśnie przygotowujemy dla naszych gości — najlepsze miejsca na postój, restauracje przy trasie oraz optymalny czas dojazdu..."
+      },
+      "carGuide": {
+        "badge": "Przewodnik motoryzacyjny",
+        "title": "Jaką klasę samochodu wybrać w zależności od podróży",
+        "description": "Wybór samochodu zależy przede wszystkim od charakteru podróży, a nie od wyglądu. W tym przewodniku wyjaśniono, kiedy potrzebny jest napęd na cztery koła, kiedy wystarczy samochód ekonomiczny, a kiedy faktycznie liczy się komfort, a nie prędkość..."
+      },
+      "airportGuide": {
+        "badge": "Przewodnik turystyczny",
+        "title": "Wiza cyfrowa do Egiptu 2026: wszystko, co trzeba wiedzieć o przylocie na lotnisko",
+        "description": "Jeśli podróżujesz przez międzynarodowe lotnisko w Kairze, procedura przylotu uległa zmianie. Nowa wizy cyfrowa zastępuje papierową naklejkę z bezpiecznym kodem QR, a niniejszy przewodnik wyjaśnia każdy etap..."
+      }
+    },
+    "dates": {
+      "roadTrip": "12 lipca 2026 r.",
+      "carGuide": "20 lipca 2026 r.",
+      "airportGuide": "4 sierpnia 2026 r."
+    }
+  },
+  "SignInBanner": {
+    "eyebrow": "Członkowie oferują więcej",
+    "titleLine1": "Zaloguj się i oszczędzaj",
+    "titlePercent": "10%",
+    "description": "Załóż konto lub zaloguj się, aby aktywować kod WELCOME10 — 10% zniżki na pierwszą rezerwację limuzyny.",
+    "useCodeLabel": "Użyj kodu",
+    "createAccount": "Załóż konto",
+    "signIn": "Zaloguj się",
+    "copied": "Skopiowano"
+  },
+  "NightsHero": {
+    "title": "Każda podróż ma swoją historię",
+    "description": "Od powitania przy bramce lotniska, przez transport do samochodu, aż po zakwaterowanie — Masar organizuje całą Twoją podróż jeszcze przed Twoim przyjazdem.",
+    "chatWithUs": "Porozmawiaj z nami",
+    "trustedBy": "Sprawdzone przez ponad 10 000 podróżnych",
+    "followUs": "Śledź nas"
+  },
+  "FaqSection": {
+    "title": "Pytania, które wszyscy zadają przed dokonaniem rezerwacji",
+    "questions": {
+      "howToBook": {
+        "q": "Jak zarezerwować lot lub wynająć samochód w Masar?",
+        "a": "Na stronie głównej wybierz odpowiednią kategorię — zakwaterowanie, wynajem samochodów lub usługi turystyczne — a znajdziesz wszystkie oferty gotowe do bezpośredniej rezerwacji za pomocą jednego kliknięcia."
+      },
+      "aiTripPlanner": {
+        "q": "Jakie są zalety inteligentnego planowania opartego na sztucznej inteligencji?",
+        "a": "Masar proponuje Ci kompletną wycieczkę (hotel + samochód + plan zwiedzania) dostosowaną do Twojego harmonogramu i budżetu, dzięki czemu nie musisz samodzielnie przeszukiwać i porównywać dziesiątek stron internetowych."
+      },
+      "airportPickup": {
+        "q": "Czy zapewniacie odbiór z lotniska w Kairze?",
+        "a": "Tak, mój prywatny kierowca odbierze Cię bezpośrednio przy bramce przylotów i zawiezie do hotelu lub w dowolne inne miejsce, które wskażesz — rezerwacja i płatność przed wyjazdem."
+      },
+      "carClasses": {
+        "q": "Czy są tam różne kategorie samochodów, z których mogę wybierać?",
+        "a": "Od ekonomicznych samochodów do poruszania się po mieście, przez samochody rodzinne, które mogą pomieścić 7 pasażerów, aż po luksusowe modele, takie jak Mercedes i BMW — wszystkie objęte są kompleksowym ubezpieczeniem."
+      },
+      "hireDriver": {
+        "q": "Czy mogę wynająć prywatnego kierowcę na dzień lub na tydzień?",
+        "a": "Tak, możesz zarezerwować prywatnego kierowcę na cały dzień lub cały tydzień, w zależności od planu podróży, z możliwością elastycznej zmiany miejsca docelowego lub terminów."
+      },
+      "englishDrivers": {
+        "q": "Czy kierowcy mówią po angielsku i organizują codzienne wycieczki?",
+        "a": "Tak, nasi kierowcy są przeszkoleni w zakresie obsługi zagranicznych gości i możemy zorganizować dla Państwa całodniową wycieczkę do dowolnego miejsca turystycznego, które Państwo wybiorą."
+      },
+      "flightTickets": {
+        "q": "Czy rezerwujecie bilety lotnicze na loty krajowe i międzynarodowe?",
+        "a": "Tak, na tej samej platformie możesz zarezerwować bilety lotnicze na loty krajowe i międzynarodowe – w konkurencyjnych cenach i bez konieczności szukania ich na innej stronie."
+      },
+      "northCoastTrips": {
+        "q": "Czy mogę zarezerwować lot z Kairu na północne wybrzeże?",
+        "a": "Tak, możesz zarezerwować samochód lub prywatnego kierowcę na trasę Kair–Północne Wybrzeże, z proponowanymi przystankami na trasie."
+      },
+      "trustScore": {
+        "q": "Jak mogę się upewnić, że samochód jest w dobrym stanie przed odbiorem?",
+        "a": "Każdy samochód ma wskaźnik zaufania (Trust Score) oparty na analizie rzeczywistych zdjęć przedstawiających jego stan, dzięki czemu przed potwierdzeniem rezerwacji możesz zapoznać się z jasną oceną."
+      },
+      "arabicSupport": {
+        "q": "Czy jest tam obsługa w języku arabskim dla gości z regionu Zatoki Perskiej?",
+        "a": "Tak, zespół obsługi klienta i kierowcy biegle posługują się językiem arabskim, a wszystkie szczegóły dotyczące rezerwacji i płatności są od samego początku dostępne w Twoim języku."
+      }
+    }
+  },
+  "TestimonialsSection": {
+    "eyebrow": "Opinie naszych klientów",
+    "title": "Podróż, której ufają nasi klienci",
+    "footerNote": "Prawdziwe opinie naszych klientów w Google — nazwiska podano w oryginalnej formie, a drobne błędy ortograficzne poprawiono jedynie w razie potrzeby.",
+    "reviews": {
+      "sara": {
+        "name": "Sara Mahmoud",
+        "date": "Styczeń 2026 r.",
+        "text": "Zarezerwowałem samochód z kierowcą na cały tydzień, a obsługa była doskonała od pierwszej chwili. Kierowca był profesjonalistą i dobrze mówił po angielsku, a także polecił nam niesamowite miejsca, o których wcześniej nie mieliśmy pojęcia."
+      },
+      "ahmed": {
+        "name": "Ahmed Reda",
+        "date": "grudzień 2025 r.",
+        "text": "Skorzystałem z usługi odbioru z lotniska w Kairze, a kierowca czekał na mnie dokładnie o umówionej godzinie. Rezerwacja i płatność przebiegły bardzo sprawnie za pośrednictwem strony internetowej."
+      },
+      "layla": {
+        "name": "Laila Hassan",
+        "date": "grudzień 2025 r.",
+        "text": "Świetna usługa. Skorzystałem z funkcji inteligentnego planowania i w ciągu kilku minut zaproponowano mi kompletną wycieczkę (hotel i samochód). Zaoszczędziło mi to mnóstwo czasu, który musiałbym poświęcić na samodzielne porównywanie ofert."
+      },
+      "khalid": {
+        "name": "Khalid Al-Otaibi",
+        "date": "październik 2025 r.",
+        "text": "Jedna z najlepszych firm, z jakimi miałem do czynienia w Egipcie. Hotel, który zarezerwowałem, był dokładnie taki, jak w opisie, a obsługa w języku arabskim bardzo ułatwiła mi wszystko."
+      },
+      "andrew": {
+        "name": "Andrew Aleksan",
+        "date": "czerwiec 2025 r.",
+        "text": "Doskonała obsługa, samochody dotarły na czas, a oferta jest bogata i w przystępnych cenach. Polecam tę firmę każdemu, kto chce zorganizować wycieczkę po Egipcie."
+      }
+    }
+  },
+  "SearchBar": {
+    "tripType": "Rodzaj przejazdu",
+    "tripTypePlaceholder": "Z lotniska",
+    "tripTypeFromAirport": "Z lotniska",
+    "tripTypeToAirport": "Na lotnisko",
+    "airport": "lotnisko",
+    "airportPlaceholder": "Wybierz lotnisko",
+    "destination": "Miejsce dostawy",
+    "destinationPlaceholder": "Wyszukaj lokalizację...",
+    "date": "Kiedy?",
+    "datePlaceholder": "Wybierz datę",
+    "time": "Czas",
+    "timePlaceholder": "O dowolnej porze",
+    "passengers": "Pasażerowie i bagaż",
+    "passengersUnit": "pasażer",
+    "search": "Zobacz samochody",
+    "chooseTime": "Wybierz godzinę",
+    "confirm": "Potwierdzenie",
+    "cancel": "Anulowanie",
+    "am": "S",
+    "pm": "M",
+    "passengersAndLuggage": "Pasażerowie i bagaż",
+    "passengersLabel": "pasażerowie",
+    "luggageLabel": "Bagaż",
+    "useCurrentLocation": "Korzystanie z obecnej strony internetowej",
+    "chooseFromMap": "Wybór z mapy",
+    "tripTypePrivate": "Wyjątkowa podróż",
+    "tripTypeDailyRental": "Czynsz dzienny",
+    "locating": "Określa Twoją lokalizację...",
+    "locationDenied": "Nie możemy określić Twojej lokalizacji. Upewnij się, że opcja lokalizacji jest włączona.",
+    "locationNotSupported": "Ta przeglądarka nie obsługuje funkcji lokalizacji",
+    "confirmLocation": "Potwierdzenie lokalizacji",
+    "departureLocation": "Miejsce odjazdu",
+    "dropoffLocation": "Miejsce dostawy",
+    "airports": {
+      "hbe": "Burj al-Arab",
+      "cai": "Kair",
+      "hrg": "Hurghada",
+      "aac": "Al-Alamin",
+      "mum": "Marsat Matrouh",
+      "ssh": "Sharm el-Sheikh"
+    }
+  },
+  "HeroLimousine": {
+    "tagline": "Wynajem limuzyny z prywatnym kierowcą · w dzień i w nocy",
+    "title": "Wynajem limuzyny z kierowcą w Egipcie",
+    "description": "Transfery z i na lotnisko, codzienne wycieczki oraz wyjątkowe usługi turystyczne"
+  },
+  "HeroFastTrack": {
+    "tagline": "Międzynarodowe lotnisko w Kairze (CAI) · Przyloty i odloty",
+    "title": "Szybka ścieżka na lotnisku w Kairze",
+    "description": "Omiń kolejki na lotnisku: osobisty asystent powita Cię przy wejściu do samolotu i przeprowadzi przez kontrolę paszportową, wizową oraz odprawę bagażową."
+  },
+  "HeroStays": {
+    "tagline": "Noclegi od Masar",
+    "title": "Pewne kroki.. do niezapomnianego pobytu",
+    "description": "Mieszkania starannie zarządzane przez Masar, a także przestrzenie rekreacyjne i ulubione zakątki wybrane z ekspercką precyzją — dbamy o najdrobniejsze szczegóły, aby Twoja podróż rozpoczęła się bez wysiłku.\nNiektóre obiekty znajdują się pod naszym bezpośrednim nadzorem, inne wybieramy z tą samą pasją i dbałością. Twoje planowanie, rezerwacja i opieka... każdy krok jest bezpieczny i prosty dzięki Masar."
+  },
+  "Filters": {
+    "filters": "Filtry",
+    "sortFeatured": "Wyróżnione",
+    "sortPriceLow": "Cena: od najniższej",
+    "sortPriceHigh": "Cena: od najwyższej",
+    "sortRating": "Najwyżej oceniane",
+    "priceByTrip": "Ceny za przejazd",
+    "allPrices": "Wszystkie ceny",
+    "arrivalTrip": "Droga do celu",
+    "departureTrip": "Podróż w stronę wyjazdu",
+    "privateTrip": "Wyjątkowa podróż",
+    "dailyRentalTrip": "Czynsz dzienny",
+    "carCategory": "Klasa samochodu",
+    "categoryAll": "wszyscy",
+    "categoryVip": "Luksusowy VIP 4",
+    "categoryStandard": "Standard 4",
+    "categoryFamily": "Rodzinny 5",
+    "categoryComfort": "Comfort 8",
+    "accessibility": "Dostępność",
+    "wheelchairAccessible": "Przystosowane dla osób poruszających się na wózkach inwalidzkich",
+    "budget": "Budżet",
+    "resetBudget": "Resetowanie",
+    "clearAllFilters": "Wyczyść wszystkie filtry",
+    "showCars": "Oferta {count} samochodów",
+    "noResults": "Nie ma dostępnych samochodów o takich parametrach, spróbuj wymienić filtry"
+  },
+  "CarCard": {
+    "viewSpecs": "Wyświetl specyfikację",
+    "seatsCount": "{count} miejsc",
+    "luggageCount": "{count} toreb",
+    "privateDriver": "Prywatny kierowca",
+    "priceUnitHourly": "EGP {hours} godzin / {km} km",
+    "priceUnit_arrival": "Trasa dojazdu",
+    "priceUnit_departure": "Na drogę powrotną",
+    "priceUnit_private": "Na prywatną przejażdżkę",
+    "priceUnit_dailyRental": "Do wynajęcia na dzień",
+    "priceUnavailable": "Cena jest obecnie niedostępna",
+    "bookNow": "Zarezerwuj teraz"
+  },
+  "CarDetails": {
+    "perDay": "Na dziś",
+    "startingFrom": "od",
+    "bookedCount": "Zarezerwowano {count} razy",
+    "specs": "Specyfikacje",
+    "luggage": "Bagaż",
+    "seats": "pasażerowie",
+    "driver": "Kierowca",
+    "driverIncluded": "Obejmuje kierowcę",
+    "driverNotIncluded": "Bez kierowcy",
+    "category": "Kategoria",
+    "bookThisCar": "Zarezerwuj ten samochód",
+    "mostRequested": "Najczęściej wyszukiwane",
+    "note": "Krótka informacja"
+  },
+  "Booking": {
+    "stepTrip": "Twoja podróż",
+    "stepChooseCar": "Wybierz swój samochód",
+    "stepCarDetails": "Szczegóły podróży",
+    "stepReview": "Sprawdził i potwierdził",
+    "selectedCar": "Wybrany przez Ciebie samochód",
+    "tripArrival": "Droga do celu",
+    "tripArrivalDesc": "Odbiór po przyjeździe, aż do drzwi Twojego adresu",
+    "tripDeparture": "Podróż w drogę powrotną",
+    "tripDepartureDesc": "Doprowadzimy Cię na czas do hali odlotów",
+    "tripPrivate": "Wyjątkowa podróż",
+    "tripPrivateDesc": "Od punktu do punktu — w Kairze lub między miastami z własnym kierowcą",
+    "tripDailyRental": "Czynsz dzienny",
+    "tripDailyRentalDesc": "Samochód i prywatny kierowca do Twojej dyspozycji przez cały dzień",
+    "dateAndTime": "Data i godzina",
+    "addTime": "Dodaj czas",
+    "addDate": "Dodaj datę",
+    "luggage": "Bagaż",
+    "passengers": "pasażerowie",
+    "next": "Dalej",
+    "routePreview": "Podgląd trasy",
+    "routePlaceholder": "Twoja droga",
+    "distanceKm": "{km} km",
+    "completeTripToSeeRoute": "Kontynuuj podróż, aby wyświetlić trasę",
+    "passengersCount": "{count} pasażerów",
+    "pointAirport": "lotnisko",
+    "pointDestination": "Twój cel podróży",
+    "pointPickup": "Miejsce startu",
+    "pointStart": "Punkt wyjścia",
+    "pointEnd": "Punkt końcowy",
+    "estimatedDistance": "Szacunkowa odległość",
+    "pointA": "Punkt wyjścia",
+    "pointB": "Punkt końcowy",
+    "back": "Powrót",
+    "confirmBooking": "Potwierdzenie rezerwacji",
+    "confirming": "Trwa weryfikacja...",
+    "totalPrice": "Cena całkowita",
+    "luggageCount": "{count} toreb"
+  },
+  "Payment": {
+    "title": "Zakończenie płatności",
+    "subtitle": "Wprowadź dane dotyczące płatności, aby potwierdzić rezerwację",
+    "amountDue": "Należna kwota",
+    "choosePaymentMethod": "Wybierz metodę płatności",
+    "payByCard": "Karta kredytowa",
+    "payByCardDesc": "Visa, Mastercard",
+    "payByWallet": "Portfel elektroniczny",
+    "payByWalletDesc": "Vodafone Cash, Instapay",
+    "payByCash": "Płatność przy odbiorze",
+    "payByCashDesc": "Zapłać kierowcy gotówką",
+    "cardNumber": "Numer karty",
+    "cardholderName": "Imię i nazwisko posiadacza karty",
+    "cardholderNamePlaceholder": "Imię i nazwisko zgodnie z danymi na karcie",
+    "expiry": "Data zakończenia",
+    "walletInstructions": "Po potwierdzeniu płatności otrzymasz wiadomość na swój numer telefonu, aby dokończyć płatność za pomocą portfela elektronicznego",
+    "cashInstructions": "Kwotę należy zapłacić kierowcy gotówką na początku przejazdu",
+    "securePaymentNote": "Twoje dane są w pełni chronione — nie przechowujemy danych Twojej karty",
+    "payNow": "Zapłać teraz",
+    "processing": "Trwa przetwarzanie..."
+  },
+  "StaySearch": {
+    "whereTo": "Gdzie chcesz się zatrzymać?",
+    "anywhere": "Gdziekolwiek",
+    "searchPlaceholder": "Szukaj według lokalizacji, nazwy hotelu lub obiektu",
+    "popularDestinations": "Popularne kierunki",
+    "destinations": {
+      "giza": { "name": "Giza", "subtitle": "Piramidy i Sfinks" },
+      "cairo": { "name": "Kair", "subtitle": "10 obiektów" },
+      "northCoast": {
+        "name": "Północne Wybrzeże",
+        "subtitle": "Plaże i kurorty"
+      },
+      "alexandria": {
+        "name": "Aleksandria",
+        "subtitle": "Perła Morza Śródziemnego"
+      },
+      "marsaMatrouh": {
+        "name": "Marsa Matruh",
+        "subtitle": "Piaszczyste plaże"
+      },
+      "elGouna": { "name": "El Guna", "subtitle": "Kurorty Morza Czerwonego" },
+      "elDabaa": {
+        "name": "El Dabaa",
+        "subtitle": "Północno-zachodnie wybrzeże"
+      }
+    },
+    "when": "Kiedy podróżujesz?",
+    "selectDates": "Wybierz daty",
+    "today": "Dzisiaj",
+    "tomorrow": "Jutro",
+    "weekend": "Weekend",
+    "nightsCount": "{count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}",
+    "confirmNights": "Potwierdź – {count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}",
+    "guests": "Liczba gości?",
+    "guestsCount": "{count} gości",
+    "adults": "Dorośli",
+    "adultsHint": "Od 18 lat",
+    "children": "Dzieci",
+    "childrenHint": "Od 0 do 17 lat",
+    "childrenPriceNote": "Opłata za dzieci jest obecnie pobierana według stawki dla dorosłych",
+    "confirm": "Potwierdź",
+    "search": "Szukaj"
+  },
+  "Hotels": {
+    "perNight": "za noc",
+    "roomTypeHotel": "Hotel",
+    "roomTypeApartment": "Apartament",
+    "roomTypeStudio": "Studio",
+    "roomTypeVilla": "Willa",
+    "roomTypeResort": "Ośrodek wypoczynkowy",
+    "roomTypeChalet": "Chalet",
+    "refineResults": "Filtruj wyniki",
+    "starRating": "Kategoria gwiazdkowa",
+    "roomType": "Typ obiektu",
+    "amenities": "Udogodnienia",
+    "amenity_luggageRoom": "Przechowalnia bagażu",
+    "amenity_liftAccess": "Winda",
+    "amenity_checkoutHour": "Godzina wymeldowania",
+    "amenity_checkinHour": "Godzina zameldowania",
+    "amenity_hotelSafe": "Sejf",
+    "amenity_breakfast": "Śniadanie",
+    "amenity_reception24": "Całodobowa recepcja",
+    "amenity_restaurant": "Restauracja",
+    "clearAll": "Wyczyść wszystko",
+    "showResults": "Pokaż wyniki ({count})",
+    "filter": "Filtry",
+    "sort_featured": "Najpierw polecane",
+    "sort_priceLow": "Cena: od najniższej",
+    "sort_priceHigh": "Cena: od najwyższej",
+    "stayCount": "{count, plural, one {# obiekt} few {# obiekty} many {# obiektów} other {# obiektów}}",
+    "noResults": "Brak wyników",
+    "tabRooms": "Pokoje",
+    "tabFacilities": "Udogodnienia",
+    "tabPhotos": "Zdjęcia",
+    "viewAllPhotos": "Zobacz wszystkie zdjęcia ({count})",
+    "roomMeta": "{size} m² · {bed} · Dla {guests} osób",
+    "basePriceLabel": "Cena podstawowa",
+    "breakfastPriceLabel": "Śniadanie w cenie",
+    "payAtCheckIn": "Płatne przy dokończeniu rezerwacji",
+    "freeCancellation": "Bezpłatne odwołanie do momentu przyjazdu",
+    "noFreeCancellation": "Brak bezpłatnego odwołania w tych datach",
+    "select": "Wybierz",
+    "selected": "Wybrano",
+    "startingFrom": "Od",
+    "chooseRoom": "Wybierz pokój",
+    "selectRoomFirst": "Najpierw wybierz pokój",
+    "noChargeYet": "Opłata nie zostanie jeszcze pobrana",
+    "contactConcierge": "Napisz do concierge na WhatsAppie",
+    "guestsSummary": "{adults, plural, one {# dorosły} few {# dorosłych} many {# dorosłych} other {# dorosłych}}{children, plural, =0 {} one {, # dziecko} few {, # dzieci} many {, # dzieci} other {, # dzieci}}",
+    "nightsCount": "{count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}"
+  },
+  "Checkout": {
+    "pageTitle": "Tylko jeden krok dzieli Cię od podróży",
+
+    "guestDetailsTitle": "Dane głównego gościa",
+    "guestDetailsSubtitle": "Dane głównego gościa — tutaj wyślemy szczegóły rezerwacji",
+
+    "firstName": "Imię",
+    "firstNamePlaceholder": "np. Ahmed",
+    "lastName": "Nazwisko",
+    "lastNamePlaceholder": "np. Mohamed",
+
+    "email": "Adres e-mail",
+    "emailPlaceholder": "example@email.com",
+    "emailHint": "Potwierdzenie rezerwacji zostanie wysłane na ten e-mail",
+
+    "phone": "Numer telefonu",
+    "phonePlaceholder": "1xx xxx xxxx",
+    "countryEgypt": "Egipt",
+    "countrySaudi": "Arabia Saudyjska",
+    "countryUAE": "Zjednoczone Emiraty Arabskie",
+
+    "country": "Kraj",
+    "selectCountry": "Wybierz swój kraj",
+    "searchCountry": "Szukaj kraju...",
+    "mostSelected": "Najczęściej wybierane",
+    "loadingCountries": "Ładowanie krajów...",
+
+    "masarGuarantee": "Zarezerwowane i zabezpieczone przez Masar",
+    "checkIn": "Zameldowanie",
+    "checkOut": "Wymeldowanie",
+    "nightsAndRoom": "{nights} nocy · {room}",
+    "total": "Razem",
+    "confirmBooking": "Potwierdź rezerwację",
+    "confirming": "Potwierdzanie...",
+    "noChargeYet": "Płatność nie zostanie еще pobrana",
+    "contactConcierge": "Napisz do concierge na WhatsApp",
+    "bookingConfirmedTitle": "Twoja rezerwacja została pomyślnie potwierdzona",
+    "bookingRef": "Numer rezerwacji: {ref}",
+    "noConfirmedBooking": "Brak potwierdzonej rezerwacji do wyświetlenia",
+    "backToSearch": "Powrót do wyszukiwania",
+    "guests": "Goście",
+    "downloadReceipt": "Pobierz potwierdzenie",
+    "backToHome": "Powrót do strony głównej"
+  },
+  "countries": {
+    "EG": "Egipt",
+    "SA": "Arabia Saudyjska",
+    "AE": "Zjednoczone Emiraty Arabskie",
+    "KW": "Kuwejt",
+    "QA": "Katar",
+    "BH": "Bahrajn",
+    "OM": "Oman",
+    "JO": "Jordania",
+    "LB": "Liban",
+    "IQ": "Irak",
+    "MA": "Maroko",
+    "TN": "Tunezja",
+    "DZ": "Algieria",
+    "LY": "Libia",
+    "SD": "Sudan",
+    "US": "Stany Zjednoczone",
+    "GB": "Wielka Brytania"
+  }
+}

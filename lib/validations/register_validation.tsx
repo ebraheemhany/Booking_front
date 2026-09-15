@@ -25,6 +25,9 @@ export const registerSchema = z.object({
       const [, domain] = email.split("@");
       return domain && !domain.startsWith(".") && !domain.endsWith(".");
     }, "Invalid email"),
+  role: z.enum(["customer", "admin", "owner"], {
+    message: "Please select a role",
+  }),
   password: z
     .string()
     .min(8, "Password must be at least 8 characters long.")
