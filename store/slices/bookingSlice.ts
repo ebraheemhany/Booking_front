@@ -9,7 +9,7 @@ interface Location {
 }
 
 interface BookingState {
-  source: "lemozeen" | "fastTrack" | null;
+  source: "lemozeen" | "fastTrack" | "agent" | null;
   tripType: TripType | null;
   pickup: Location | null;
   dropoff: Location | null;

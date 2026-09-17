@@ -9,6 +9,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
+      storageKey="masar-theme"
+      enableColorScheme
     >
       {children}
     </NextThemesProvider>

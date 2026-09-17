@@ -32,7 +32,12 @@
   },
   "SideMenu": {
     "createAccount": "Konto erstellen",
-    "login": "Anmelden"
+    "login": "Anmelden",
+    "limousine": "Limousine",
+    "fastTrack": "Fast Track",
+    "stays": "Unterkünfte",
+    "bookingPage": "Meine Buchungen",
+    "profilePage": "Profil"
   },
   "Footer": {
     "tagline": "Eine Reise … Jede Reise hat ihre eigene Geschichte",
@@ -627,6 +632,62 @@
     "downloadReceipt": "Beleg herunterladen",
     "backToHome": "Zurück zur Startseite"
   },
+  "Bookings": {
+    "title": "Ihre Buchungen",
+    "subtitle": "Alle Reisen und Buchungen an einem Ort — Limousine, Fast Track, Autos und Unterkünfte.",
+    "tabAll": "Alle",
+    "tabUpcoming": "Bevorstehend",
+    "tabDone": "Vergangen",
+    "tabCancelled": "Storniert",
+    "statusUpcoming": "Bevorstehend",
+    "statusDone": "Abgeschlossen",
+    "statusCancelled": "Storniert",
+    "emptyTitle": "Keine Buchungen vorhanden",
+    "emptyDescription": "Buchungen in diesem Bereich werden hier angezeigt.",
+    "bookingNumber": "Buchung {ref}",
+    "actionDetails": "Details",
+    "actionCancel": "Buchung stornieren",
+    "actionInvoice": "Rechnung",
+    "actionBookAgain": "Erneut buchen"
+  },
+  "Profile": {
+    "memberSince": "Mitglied seit März 2025",
+    "tier": "Silbermitgliedschaft",
+    "editPhoto": "Foto bearbeiten",
+    "verified": "Verifiziert",
+    "contactTitle": "Kontaktdaten",
+    "personalTitle": "Persönliche Daten",
+    "addressesTitle": "Gespeicherte Adressen",
+    "paymentsTitle": "Zahlungsmethoden",
+    "securityTitle": "Anmeldung und Sicherheit",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "addAddress": "Adresse hinzufügen",
+    "addPayment": "Karte hinzufügen",
+    "default": "Standard",
+    "connected": "Verbunden",
+    "connect": "Verbinden",
+    "deleteTitle": "Konto löschen",
+    "deleteDescription": "Ihre Daten und Buchungen werden dauerhaft gelöscht und können nicht wiederhergestellt werden.",
+    "totalBookings": "Buchungen insgesamt",
+    "completedTrips": "Abgeschlossene Reisen",
+    "loyaltyPoints": "Treuepunkte",
+    "fullName": "Vollständiger Name",
+    "birthDate": "Geburtsdatum",
+    "gender": "Geschlecht",
+    "nationalId": "Personalausweisnummer",
+    "preferredLanguage": "Bevorzugte Sprache",
+    "currency": "Währung",
+    "home": "Zuhause",
+    "work": "Arbeit",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "password": "Passwort",
+    "passwordChanged": "Zuletzt vor 4 Monaten geändert",
+    "phone": "Mobilnummer",
+    "otpVerification": "Für die OTP-Bestätigung",
+    "expiresOn": "Gültig bis"
+  },
   "countries": {
     "EG": "Ägypten",
     "SA": "Saudi-Arabien",
@@ -645,5 +706,22 @@
     "SD": "Sudan",
     "US": "Vereinigte Staaten",
     "GB": "Vereinigtes Königreich"
+  },
+  "aiAssistant": {
+    "title": "Masar Assistenz",
+    "inputPlaceholder": "Geben Sie Ihre Anfrage ein...",
+    "connectionError": "Verbindungsfehler aufgetreten",
+    "tool": {
+      "tripFilled": "Die Reisedaten wurden ausgefüllt. Bitte überprüfen Sie diese und klicken Sie auf Suchen.",
+      "navigated": "Seite wurde geöffnet",
+      "pageOnly": "Diese Funktion ist nur auf der Seite {page} verfügbar",
+      "done": "Ausgeführt",
+      "noCarMatch": "Entschuldigung, derzeit entspricht kein Auto diesen Kriterien 😕",
+      "carChosen": "Sie haben {carName} ausgewählt — überprüfen Sie Ihre Angaben auf der Buchungsseite und fahren Sie dort fort."
+    },
+    "pages": {
+      "carBooking": "Mietwagenbuchung",
+      "hotelBooking": "Hotelbuchung"
+    }
   }
 }

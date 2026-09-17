@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "leaflet/dist/leaflet.css";
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -14,6 +15,14 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
 }
 
 :root {
@@ -28,6 +37,15 @@
   --popover-foreground: #0b1e3d;
   --primary: #c9a96e;
   --primary-foreground: #0b1e3d;
+  --secondary: #f0efe9;
+  --secondary-foreground: #0b1e3d;
+  --card: #ffffff;
+  --card-foreground: #0b1e3d;
+  --ring: rgba(201, 169, 110, 0.45);
+  --input: #f1f1ef;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  color-scheme: light;
 }
 
 .dark {
@@ -38,10 +56,129 @@
   --muted-foreground: #9ca3af;
   --accent: rgba(201, 169, 110, 0.12);
   --accent-foreground: #c9a96e;
-  --popover: #0f1e33;
+  --popover: #101b2d;
   --popover-foreground: #f5f5f5;
   --primary: #c9a96e;
-  --primary-foreground: #0b1e3d;
+  --primary-foreground: #112033;
+  --secondary: #111827;
+  --secondary-foreground: #f5f5f5;
+  --card: #101b2d;
+  --card-foreground: #f5f5f5;
+  --ring: rgba(201, 169, 110, 0.6);
+  --input: #1f2937;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    color: var(--foreground);
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: var(--input);
+    border-color: var(--border);
+  }
+
+  ::selection {
+    background: rgba(201, 169, 110, 0.35);
+    color: var(--foreground);
+  }
+}
+
+@layer components {
+  .theme-surface {
+    background-color: var(--card);
+    color: var(--card-foreground);
+    border: 1px solid var(--border);
+  }
+}
+
+  /* Keep legacy utility classes aligned with the active color scheme. */
+  [class*="bg-[#0a1120]"],
+  [class*="bg-[#0d1728]"],
+  [class*="bg-[#101d33]"],
+  [class*="bg-[#111827]"],
+  [class*="bg-[#152441]"],
+  [class*="bg-[#0b1220]"],
+  [class*="bg-[#0B1E3D]"],
+  [class*="bg-[#0e1421]"] {
+  background-color: var(--card) !important;
+}
+
+  [class*="border-white/10"],
+  [class*="border-white/15"],
+  [class*="border-white/5"],
+  [class*="divide-white/"] {
+  border-color: var(--border) !important;
+}
+
+  [class*="text-white"] {
+  color: var(--foreground) !important;
+}
+
+  [class*="text-gray-800"],
+  [class*="text-gray-700"] {
+    color: var(--foreground) !important;
+  }
+
+  [class*="text-gray-500"],
+  [class*="text-gray-400"] {
+    color: var(--muted-foreground) !important;
+  }
+
+  [class~="bg-white"],
+  [class~="bg-gray-50"] {
+    background-color: var(--card) !important;
+  }
+
+  [class~="border-gray-300"],
+  [class~="border-gray-100"] {
+    border-color: var(--border) !important;
+  }
+
+  [class*="bg-white/5"],
+  [class*="bg-white/10"],
+  [class*="bg-white/15"],
+  [class*="bg-white/20"] {
+  background-color: var(--muted) !important;
+}
+
+  [class*="hover:bg-white/5"]:hover,
+  [class*="hover:bg-white/10"]:hover,
+  [class*="hover:bg-white/15"]:hover,
+  [class*="hover:bg-white/20"]:hover {
+  background-color: var(--muted) !important;
+}
+
+  [class*="text-white/40"],
+  [class*="text-white/50"],
+  [class*="text-white/60"],
+  [class*="text-white/70"],
+  [class*="text-white/80"] {
+  color: var(--muted-foreground) !important;
 }
 
 /* zoom bottun in map */
@@ -50,14 +187,14 @@
   border: none !important;
 }
 .leaflet-control-zoom a {
-  background-color: #0d1728 !important;
-  color: white !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: var(--card) !important;
+  color: var(--foreground) !important;
+  border-color: var(--border) !important;
 }
 .leaflet-control-zoom a:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: var(--muted) !important;
 }
 .leaflet-control-attribution {
-  background-color: rgba(13, 23, 40, 0.8) !important;
-  color: rgba(255, 255, 255, 0.5) !important;
+  background-color: color-mix(in srgb, var(--card) 88%, transparent) !important;
+  color: var(--muted-foreground) !important;
 }

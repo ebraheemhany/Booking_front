@@ -32,7 +32,12 @@
   },
   "SideMenu": {
     "createAccount": "Załóż konto",
-    "login": "Zaloguj się"
+    "login": "Zaloguj się",
+    "limousine": "Limuzyna",
+    "fastTrack": "Fast Track",
+    "stays": "Pobyty",
+    "bookingPage": "Moje rezerwacje",
+    "profilePage": "Profil"
   },
   "Footer": {
     "tagline": "Trasa… Każda podróż ma swoją historię",
@@ -632,6 +637,62 @@
     "downloadReceipt": "Pobierz potwierdzenie",
     "backToHome": "Powrót do strony głównej"
   },
+  "Bookings": {
+    "title": "Twoje rezerwacje",
+    "subtitle": "Wszystkie podróże i rezerwacje w jednym miejscu — limuzyny, Fast Track, samochody i pobyty.",
+    "tabAll": "Wszystkie",
+    "tabUpcoming": "Nadchodzące",
+    "tabDone": "Zakończone",
+    "tabCancelled": "Anulowane",
+    "statusUpcoming": "Nadchodząca",
+    "statusDone": "Zakończona",
+    "statusCancelled": "Anulowana",
+    "emptyTitle": "Brak rezerwacji",
+    "emptyDescription": "Rezerwacje w tej sekcji pojawią się tutaj.",
+    "bookingNumber": "Rezerwacja {ref}",
+    "actionDetails": "Szczegóły",
+    "actionCancel": "Anuluj rezerwację",
+    "actionInvoice": "Rachunek",
+    "actionBookAgain": "Zarezerwuj ponownie"
+  },
+  "Profile": {
+    "memberSince": "Członek od marca 2025",
+    "tier": "Srebrne członkostwo",
+    "editPhoto": "Edytuj zdjęcie",
+    "verified": "Zweryfikowano",
+    "contactTitle": "Dane kontaktowe",
+    "personalTitle": "Dane osobowe",
+    "addressesTitle": "Zapisane adresy",
+    "paymentsTitle": "Metody płatności",
+    "securityTitle": "Logowanie i bezpieczeństwo",
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "addAddress": "Dodaj adres",
+    "addPayment": "Dodaj kartę",
+    "default": "Domyślne",
+    "connected": "Połączono",
+    "connect": "Połącz",
+    "deleteTitle": "Usuń konto",
+    "deleteDescription": "Twoje dane i rezerwacje zostaną trwale usunięte i nie będzie można ich odzyskać.",
+    "totalBookings": "Łączna liczba rezerwacji",
+    "completedTrips": "Ukończone podróże",
+    "loyaltyPoints": "Punkty lojalnościowe",
+    "fullName": "Imię i nazwisko",
+    "birthDate": "Data urodzenia",
+    "gender": "Płeć",
+    "nationalId": "Numer dowodu",
+    "preferredLanguage": "Preferowany język",
+    "currency": "Waluta",
+    "home": "Dom",
+    "work": "Praca",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "password": "Hasło",
+    "passwordChanged": "Ostatnia zmiana 4 miesiące temu",
+    "phone": "Numer telefonu",
+    "otpVerification": "Do weryfikacji OTP",
+    "expiresOn": "Wygasa"
+  },
   "countries": {
     "EG": "Egipt",
     "SA": "Arabia Saudyjska",
@@ -650,5 +711,22 @@
     "SD": "Sudan",
     "US": "Stany Zjednoczone",
     "GB": "Wielka Brytania"
+  },
+  "aiAssistant": {
+    "title": "Asystent Masar",
+    "inputPlaceholder": "Wpisz swoje zapytanie...",
+    "connectionError": "Wystąpił błąd połączenia",
+    "tool": {
+      "tripFilled": "Dane podróży zostały uzupełnione, sprawdź je i kliknij szukaj.",
+      "navigated": "Otwarto stronę",
+      "pageOnly": "Ta funkcja jest dostępna tylko na stronie {page}",
+      "done": "Wykonano",
+      "noCarMatch": "Przepraszamy, w tej chwili żaden samochód nie spełnia tych kryteriów 😕",
+      "carChosen": "Wybrano {carName} — sprawdź swoje dane na stronie potwierdzenia rezerwacji i dokończ proces."
+    },
+    "pages": {
+      "carBooking": "Rezerwacja samochodów",
+      "hotelBooking": "Rezerwacja hoteli"
+    }
   }
 }

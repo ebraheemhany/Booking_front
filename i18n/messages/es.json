@@ -32,7 +32,12 @@
   },
   "SideMenu": {
     "createAccount": "Crear una cuenta",
-    "login": "Iniciar sesión"
+    "login": "Iniciar sesión",
+    "limousine": "Limusina",
+    "fastTrack": "Fast Track",
+    "stays": "Estancias",
+    "bookingPage": "Mis reservas",
+    "profilePage": "Perfil"
   },
   "Footer": {
     "tagline": "Un recorrido... Cada viaje tiene su historia",
@@ -626,6 +631,62 @@
     "downloadReceipt": "Descargar recibo",
     "backToHome": "Volver al inicio"
   },
+  "Bookings": {
+    "title": "Tus reservas",
+    "subtitle": "Todos tus viajes y reservas en un solo lugar: limusina, fast track, coches y estancias.",
+    "tabAll": "Todas",
+    "tabUpcoming": "Próximas",
+    "tabDone": "Pasadas",
+    "tabCancelled": "Canceladas",
+    "statusUpcoming": "Próxima",
+    "statusDone": "Completada",
+    "statusCancelled": "Cancelada",
+    "emptyTitle": "No hay reservas aquí",
+    "emptyDescription": "Tus reservas en esta sección aparecerán aquí.",
+    "bookingNumber": "Reserva {ref}",
+    "actionDetails": "Detalles",
+    "actionCancel": "Cancelar reserva",
+    "actionInvoice": "Factura",
+    "actionBookAgain": "Reservar de nuevo"
+  },
+  "Profile": {
+    "memberSince": "Miembro desde marzo de 2025",
+    "tier": "Membresía Silver",
+    "editPhoto": "Editar foto",
+    "verified": "Verificado",
+    "contactTitle": "Datos de contacto",
+    "personalTitle": "Datos personales",
+    "addressesTitle": "Direcciones guardadas",
+    "paymentsTitle": "Métodos de pago",
+    "securityTitle": "Acceso y seguridad",
+    "edit": "Editar",
+    "save": "Guardar",
+    "addAddress": "Añadir dirección",
+    "addPayment": "Añadir tarjeta",
+    "default": "Predeterminada",
+    "connected": "Conectado",
+    "connect": "Conectar",
+    "deleteTitle": "Eliminar cuenta",
+    "deleteDescription": "Tus datos y reservas se eliminarán permanentemente y no podrán recuperarse.",
+    "totalBookings": "Reservas totales",
+    "completedTrips": "Viajes completados",
+    "loyaltyPoints": "Puntos de fidelidad",
+    "fullName": "Nombre completo",
+    "birthDate": "Fecha de nacimiento",
+    "gender": "Género",
+    "nationalId": "Documento de identidad",
+    "preferredLanguage": "Idioma preferido",
+    "currency": "Moneda",
+    "home": "Casa",
+    "work": "Trabajo",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "password": "Contraseña",
+    "passwordChanged": "Último cambio hace 4 meses",
+    "phone": "Número de móvil",
+    "otpVerification": "Para verificación por OTP",
+    "expiresOn": "Caduca el"
+  },
   "countries": {
     "EG": "Egipto",
     "SA": "Arabia Saudita",
@@ -644,5 +705,22 @@
     "SD": "Sudán",
     "US": "Estados Unidos",
     "GB": "Reino Unido"
+  },
+  "aiAssistant": {
+    "title": "Asistente Masar",
+    "inputPlaceholder": "Escribe tu solicitud...",
+    "connectionError": "Ocurrió un error de conexión",
+    "tool": {
+      "tripFilled": "Los detalles del viaje se han completado. Revísalos y haz clic en buscar.",
+      "navigated": "Página abierta correctamente",
+      "pageOnly": "Esta función solo está disponible en la página {page}",
+      "done": "Completado",
+      "noCarMatch": "Lo sentimos, no hay ningún coche que coincida con estos criterios en este momento 😕",
+      "carChosen": "Has elegido {carName}; revisa tus datos en la página de confirmación para completar el proceso."
+    },
+    "pages": {
+      "carBooking": "Reserva de coches",
+      "hotelBooking": "Reserva de hoteles"
+    }
   }
 }

@@ -17,7 +17,12 @@
   },
   "SideMenu": {
     "createAccount": "إنشاء حساب",
-    "login": "تسجيل الدخول"
+    "login": "تسجيل الدخول",
+    "limousine": "ليموزين",
+    "fastTrack": "فاست تراك",
+    "stays": "إقامات",
+    "bookingPage": "حجوزاتي",
+    "profilePage": "الملف الشخصي"
   },
   "LanguageModal": {
     "title": "اللغة والعملة",
@@ -43,7 +48,12 @@
   },
   "SideMenu": {
     "createAccount": "إنشاء حساب",
-    "login": "تسجيل الدخول"
+    "login": "تسجيل الدخول",
+    "limousine": "ليموزين",
+    "fastTrack": "فاست تراك",
+    "stays": "إقامات",
+    "bookingPage": "حجوزاتي",
+    "profilePage": "الملف الشخصي"
   },
   "Nav": {
     "limousine": "ليموزين",
@@ -630,6 +640,62 @@
     "downloadReceipt": "تحميل الإيصال",
     "backToHome": "العودة للرئيسية"
   },
+  "Bookings": {
+    "title": "حجوزاتك",
+    "subtitle": "كل رحلاتك وحجوزاتك في مكان واحد — ليموزين، فاست تراك، سيارات، وإقامات.",
+    "tabAll": "الكل",
+    "tabUpcoming": "القادمة",
+    "tabDone": "السابقة",
+    "tabCancelled": "الملغاة",
+    "statusUpcoming": "قادم",
+    "statusDone": "منتهي",
+    "statusCancelled": "ملغي",
+    "emptyTitle": "مفيش حجوزات هنا",
+    "emptyDescription": "لما يبقى عندك حجز في القسم ده هيظهر هنا.",
+    "bookingNumber": "حجز رقم {ref}",
+    "actionDetails": "تفاصيل",
+    "actionCancel": "إلغاء الحجز",
+    "actionInvoice": "الفاتورة",
+    "actionBookAgain": "احجز تاني"
+  },
+  "Profile": {
+    "memberSince": "عضو منذ مارس 2025",
+    "tier": "عضوية فضية",
+    "editPhoto": "تعديل الصورة",
+    "verified": "موثّق",
+    "contactTitle": "بيانات التواصل",
+    "personalTitle": "البيانات الشخصية",
+    "addressesTitle": "العناوين المحفوظة",
+    "paymentsTitle": "وسائل الدفع",
+    "securityTitle": "تسجيل الدخول والأمان",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "addAddress": "إضافة عنوان",
+    "addPayment": "إضافة بطاقة",
+    "default": "افتراضي",
+    "connected": "متصل",
+    "connect": "ربط",
+    "deleteTitle": "حذف الحساب",
+    "deleteDescription": "هيتم حذف بياناتك وحجوزاتك نهائيًا ومفيش استرجاع بعد كده.",
+    "totalBookings": "إجمالي الحجوزات",
+    "completedTrips": "الرحلات المكتملة",
+    "loyaltyPoints": "نقاط الولاء",
+    "fullName": "الاسم بالكامل",
+    "birthDate": "تاريخ الميلاد",
+    "gender": "الجنس",
+    "nationalId": "الرقم القومي",
+    "preferredLanguage": "اللغة المفضلة",
+    "currency": "العملة",
+    "home": "المنزل",
+    "work": "الشغل",
+    "visa": "فيزا",
+    "mastercard": "ماستركارد",
+    "password": "كلمة المرور",
+    "passwordChanged": "آخر تغيير من 4 شهور",
+    "phone": "رقم الموبايل",
+    "otpVerification": "للتحقق عبر OTP",
+    "expiresOn": "تنتهي في"
+  },
   "countries": {
     "EG": "مصر",
     "SA": "المملكة العربية السعودية",
@@ -648,5 +714,24 @@
     "SD": "السودان",
     "US": "الولايات المتحدة",
     "GB": "المملكة المتحدة"
-  }
+  },
+  
+  "aiAssistant": {
+    "title": "مساعد مسار",
+    "inputPlaceholder": "اكتب طلبك...",
+    "connectionError": "حصل خطأ في الاتصال",
+    "tool": {
+      "tripFilled": "تم ملء بيانات الرحلة، راجعها واضغط بحث",
+      "navigated": "تم فتح الصفحة",
+      "pageOnly": "الميزة دي متاحة بس في صفحة {page}",
+      "done": "تم التنفيذ",
+      "noCarMatch": "معلش، مفيش عربية مطابقة للمعايير دي دلوقتي 😕",
+      "carChosen": "اخترتلك {carName} — راجع بياناتك في صفحة تأكيد الحجز وكمّل من هناك"
+    },
+    "pages": {
+      "carBooking": "حجز العربيات",
+      "hotelBooking": "حجز الفنادق"
+    }
+  
+}
 }

@@ -32,7 +32,12 @@
   },
   "SideMenu": {
     "createAccount": "Створити обліковий запис",
-    "login": "Увійти"
+    "login": "Увійти",
+    "limousine": "Лімузин",
+    "fastTrack": "Fast Track",
+    "stays": "Проживання",
+    "bookingPage": "Мої бронювання",
+    "profilePage": "Профіль"
   },
   "Footer": {
     "tagline": "Маршрут... Кожна подорож має свою історію",
@@ -629,6 +634,62 @@
     "downloadReceipt": "Завантажити квитанцію",
     "backToHome": "На головну"
   },
+  "Bookings": {
+    "title": "Ваші бронювання",
+    "subtitle": "Усі ваші подорожі та бронювання в одному місці — лімузини, Fast Track, автомобілі та проживання.",
+    "tabAll": "Усі",
+    "tabUpcoming": "Майбутні",
+    "tabDone": "Минулі",
+    "tabCancelled": "Скасовані",
+    "statusUpcoming": "Майбутнє",
+    "statusDone": "Завершено",
+    "statusCancelled": "Скасовано",
+    "emptyTitle": "Тут немає бронювань",
+    "emptyDescription": "Бронювання в цьому розділі з'являться тут.",
+    "bookingNumber": "Бронювання {ref}",
+    "actionDetails": "Деталі",
+    "actionCancel": "Скасувати бронювання",
+    "actionInvoice": "Квитанція",
+    "actionBookAgain": "Забронювати знову"
+  },
+  "Profile": {
+    "memberSince": "Учасник з березня 2025 року",
+    "tier": "Срібне членство",
+    "editPhoto": "Змінити фото",
+    "verified": "Підтверджено",
+    "contactTitle": "Контактні дані",
+    "personalTitle": "Особисті дані",
+    "addressesTitle": "Збережені адреси",
+    "paymentsTitle": "Способи оплати",
+    "securityTitle": "Вхід і безпека",
+    "edit": "Змінити",
+    "save": "Зберегти",
+    "addAddress": "Додати адресу",
+    "addPayment": "Додати картку",
+    "default": "За замовчуванням",
+    "connected": "Підключено",
+    "connect": "Підключити",
+    "deleteTitle": "Видалити обліковий запис",
+    "deleteDescription": "Ваші дані та бронювання буде видалено назавжди без можливості відновлення.",
+    "totalBookings": "Усього бронювань",
+    "completedTrips": "Завершені поїздки",
+    "loyaltyPoints": "Бали лояльності",
+    "fullName": "Повне ім'я",
+    "birthDate": "Дата народження",
+    "gender": "Стать",
+    "nationalId": "Посвідчення особи",
+    "preferredLanguage": "Бажана мова",
+    "currency": "Валюта",
+    "home": "Дім",
+    "work": "Робота",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "password": "Пароль",
+    "passwordChanged": "Змінено 4 місяці тому",
+    "phone": "Номер телефону",
+    "otpVerification": "Для перевірки через OTP",
+    "expiresOn": "Дійсна до"
+  },
   "countries": {
     "EG": "Єгипет",
     "SA": "Саудівська Аравія",
@@ -647,5 +708,22 @@
     "SD": "Судан",
     "US": "Сполучені Штати",
     "GB": "Велика Британія"
+  },
+  "aiAssistant": {
+    "title": "Помічник Masar",
+    "inputPlaceholder": "Введіть ваш запит...",
+    "connectionError": "Сталася помилка з'єднання",
+    "tool": {
+      "tripFilled": "Дані поїздки заповнені, перевірте їх та натисніть «Шукати».",
+      "navigated": "Сторінку відкрито",
+      "pageOnly": "Ця функція доступна лише на сторінці {page}",
+      "done": "Виконано",
+      "noCarMatch": "Вибачте, наразі немає авто, що відповідає цим критеріям 😕",
+      "carChosen": "Ви обрали {carName} — перевірте свої дані на сторінці підтвердження та продовжіть оформлення."
+    },
+    "pages": {
+      "carBooking": "Бронювання авто",
+      "hotelBooking": "Бронювання готелів"
+    }
   }
 }

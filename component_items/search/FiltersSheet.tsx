@@ -226,9 +226,12 @@ export function FiltersSheet({
               max={budgetMax}
               step={100}
               value={[filters.minBudget, filters.maxBudget]}
-              onValueChange={([min, max]) =>
-                update({ minBudget: min, maxBudget: max })
-              }
+              onValueChange={(value) => {
+                if (Array.isArray(value)) {
+                  const [min, max] = value;
+                  update({ minBudget: min, maxBudget: max });
+                }
+              }}
               className="mb-2"
             />
 

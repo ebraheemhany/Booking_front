@@ -37,7 +37,7 @@ export function HeroSection({
           {tagline}
         </span>
 
-        <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
+        <h1 className="text-white! text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
           {title}
         </h1>
 

@@ -54,8 +54,10 @@ export default function LanguageCurrencyModal({
     onOpenChange(false);
   }
 
+  const modalKey = `${locale}-${currentCurrency}-${open ? "open" : "closed"}`;
+
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog key={modalKey} open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-lg gap-0 p-0 bg-background text-foreground">
         <DialogHeader className="border-b border-border px-6 py-4">
           <DialogTitle className="text-right text-lg text-foreground">

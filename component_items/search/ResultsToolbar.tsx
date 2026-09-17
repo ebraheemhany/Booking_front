@@ -77,7 +77,7 @@ export function ResultsToolbar({
       <div className="flex flex-col sm:flex-row gap-3">
         {/* الفرز */}
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+          <DropdownMenuTrigger>
             <Button
               variant="outline"
               className="gap-2 border-white/10 bg-transparent text-sm text-white hover:bg-white/5"

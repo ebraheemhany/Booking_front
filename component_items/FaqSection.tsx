@@ -39,8 +39,6 @@ export function FaqSection() {
         {columns.map((column, colIndex) => (
           <Accordion
             key={colIndex}
-            type="single"
-            collapsible
             className="space-y-3"
           >
             {column.map((key) => (

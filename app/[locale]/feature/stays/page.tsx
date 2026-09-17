@@ -6,110 +6,30 @@ import {
   type StaySearchData,
 } from "@/component_items/StaySearch/StaySearchBar";
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { StayResultsPage } from "@/component_items/hotels/StayResultsPage";
 import type { HotelFiltersState } from "@/component_items/hotels/HotelFiltersSheet";
-import type { HotelCardData } from "@/component_items/hotels/HotelCard";
+import type {
+  HotelCardData,
+  HotelDetails,
+  RoomOption,
+} from "@/component_items/hotels/HotelCard";
+import { mockHotelDetails } from "@/component_items/hotels/mockHotelDetails";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "@/store/store";
 import { setStaySearchData } from "@/store/slices/staySearchSlice";
-const mockHotels: HotelCardData[] = [
-  {
-    specs: {
-      id: "1",
-      name: { ar: "فندق النيل الذهبي", en: "Golden Nile Hotel" },
-      location: { ar: "القاهرة", en: "Cairo" },
-      roomType: "hotel",
-      stars: 4,
-      image: "/image/hotels/hotel1.jpg",
-      amenities: [
-        "luggageRoom",
-        "liftAccess",
-        "breakfast",
-        "reception24",
-        "hotelSafe",
-      ],
-      pricePerNight: 2200,
-    },
-  },
-  {
-    specs: {
-      id: "2",
-      name: { ar: "شاليه الساحل", en: "Coast Chalet" },
-      location: { ar: "الساحل الشمالي", en: "North Coast" },
-      roomType: "chalet",
-      stars: 5,
-      image: "/image/hotels/hotel2.jpg",
-      amenities: ["liftAccess", "restaurant"],
-      pricePerNight: 3500,
-    },
-  },
-  {
-    specs: {
-      id: "3",
-      name: { ar: "منتجع البحر الأحمر", en: "Red Sea Resort" },
-      location: { ar: "الغردقة", en: "Hurghada" },
-      roomType: "resort",
-      stars: 5,
-      image: "/image/hotels/hotel3.jpg",
-      amenities: ["swimmingPool", "beachfront", "breakfast", "wifi", "spa"],
-      pricePerNight: 4800,
-    },
-  },
-  {
-    specs: {
-      id: "4",
-      name: { ar: "أجنحة الأهرامات الملكية", en: "Pyramids Royal Suites" },
-      location: { ar: "الجيزة", en: "Giza" },
-      roomType: "hotel",
-      stars: 4,
-      image: "/image/hotels/hotel4.jpg",
-      amenities: ["freeParking", "airportShuttle", "reception24", "breakfast"],
-      pricePerNight: 1950,
-    },
-  },
-  {
-    specs: {
-      id: "5",
-      name: { ar: "نزل أصيلة النوبي", en: "Asala Nubian Lodge" },
-      location: { ar: "أسوان", en: "Aswan" },
-      roomType: "hotel",
-      stars: 3,
-      image: "/image/hotels/hotel5.jpg",
-      amenities: ["riverView", "breakfast", "restaurant", "airConditioning"],
-      pricePerNight: 1200,
-    },
-  },
-  {
-    specs: {
-      id: "6",
-      name: { ar: "فندق البوسيت الشاطئي", en: "Beau Site Beach Hotel" },
-      location: { ar: "مرسى مطروح", en: "Marsa Matrouh" },
-      roomType: "hotel",
-      stars: 4,
-      image: "/image/hotels/hotel6.jpg",
-      amenities: ["beachfront", "swimmingPool", "liftAccess", "restaurant"],
-      pricePerNight: 2800,
-    },
-  },
-  {
-    specs: {
-      id: "7",
-      name: { ar: "كامب سحر دهب", en: "Dahab Magic Camp" },
-      location: { ar: "دهب", en: "Dahab" },
-      roomType: "hotel",
-      stars: 3,
-      image: "/image/hotels/hotel7.jpg",
-      amenities: ["wifi", "petFriendly", "beachfront"],
-      pricePerNight: 850,
-    },
-  },
-];
+// import { AiAssistant } from "@/component_items/agent/AiAssistant";
+import { useRegisterAiHandlers } from "@/component_items/agent/AiAssistantContext";
+
+const mockHotels: HotelCardData[] = mockHotelDetails.map((h) => ({ specs: h }));
 
 export default function StaysPage() {
   const t = useTranslations("HeroStays");
-  const [searchData, setSearchData] = useState<StaySearchData | null>(null);
+  const router = useRouter();
+  const dispatch = useDispatch<AppDispatch>();
 
+  const [searchData, setSearchData] = useState<StaySearchData | null>(null);
   const [filters, setFilters] = useState<HotelFiltersState>({
     minStars: null,
     roomType: "all",
@@ -118,7 +38,19 @@ export default function StaysPage() {
     maxBudget: 10000,
   });
 
-  const dispatch = useDispatch<AppDispatch>();
+  // بنحتفظ بآخر قائمة فنادق/غرف اتعرضت عشان نحل بيها اختيار المستخدم بالرقم أو الاسم
+  const lastHotelListRef = useRef<HotelDetails[]>([]);
+  const lastRoomListRef = useRef<{ hotel: HotelDetails; rooms: RoomOption[] }>({
+    hotel: null as any,
+    rooms: [],
+  });
+  // بنحتفظ ببيانات البحث الأخيرة (تواريخ وضيوف) عشان نستخدمها وقت التنقل النهائي
+  const lastSearchCriteriaRef = useRef<{
+    checkIn?: string;
+    checkOut?: string;
+    adults?: number;
+    children?: number;
+  }>({});
 
   const handleSearch = (data: StaySearchData) => {
     setSearchData(data);
@@ -135,11 +67,140 @@ export default function StaysPage() {
     );
   };
 
-  const handleApplyFilters = (values: Record<string, any>) => {
-    console.log(values);
-    // مثال: { stars: [5, 4], stayType: ["chalet"], managedByEzRent: true }
-    // من هنا تبعتها للـ API أو تخليها جزء من نفس فلترة البحث (searchData)
+  // ── خطوة 1: ترشيح فنادق وعرضهم كنص مرقّم ──
+  const handleRecommendHotels = (criteria: {
+    destination: string;
+    checkIn: string;
+    checkOut: string;
+    adults?: number;
+    children?: number;
+    minStars?: number;
+    maxBudget?: number;
+  }): string => {
+    let candidates = mockHotelDetails.filter(
+      (h) =>
+        h.location.ar.includes(criteria.destination) ||
+        h.location.en
+          .toLowerCase()
+          .includes(criteria.destination.toLowerCase()),
+    );
+
+    if (candidates.length === 0) candidates = mockHotelDetails; // لو مفيش تطابق دقيق، نوري كل الخيارات
+
+    if (criteria.minStars) {
+      candidates = candidates.filter((h) => h.stars >= criteria.minStars!);
+    }
+    if (criteria.maxBudget) {
+      candidates = candidates.filter(
+        (h) => h.pricePerNight <= criteria.maxBudget!,
+      );
+    }
+
+    if (candidates.length === 0) {
+      lastHotelListRef.current = [];
+      return "معلش، مفيش فنادق مطابقة للمعايير دي دلوقتي 😕";
+    }
+
+    lastHotelListRef.current = candidates;
+    lastSearchCriteriaRef.current = {
+      checkIn: criteria.checkIn,
+      checkOut: criteria.checkOut,
+      adults: criteria.adults,
+      children: criteria.children,
+    };
+
+    const listText = candidates
+      .map(
+        (h, i) =>
+          `${i + 1}. ${h.name.ar} — ${h.location.ar} — ${"★".repeat(h.stars)} — ${h.pricePerNight} جنيه/الليلة`,
+      )
+      .join("\n");
+
+    return `لقيتلك دول:\n${listText}\n\nاختار رقم الفندق أو قولّي اسمه`;
   };
+
+  // ── خطوة 2: حل اختيار الفندق وعرض غرفه ──
+  const handleSelectHotel = (selector: string): string => {
+    const list = lastHotelListRef.current;
+    if (list.length === 0) {
+      return "محتاج تدور على فنادق الأول قبل ما تختار 🙂";
+    }
+
+    let hotel: HotelDetails | undefined;
+
+    const asNumber = parseInt(selector.trim(), 10);
+    if (!isNaN(asNumber) && list[asNumber - 1]) {
+      hotel = list[asNumber - 1];
+    } else {
+      hotel = list.find(
+        (h) =>
+          h.name.ar.includes(selector) ||
+          h.name.en.toLowerCase().includes(selector.toLowerCase()),
+      );
+    }
+
+    if (!hotel) {
+      return "معرفتش أحدد الفندق ده، جرب تكتب رقمه من القائمة اللي فاتت";
+    }
+
+    lastRoomListRef.current = { hotel, rooms: hotel.rooms };
+
+    const roomsText = hotel.rooms
+      .map(
+        (r, i) =>
+          `${i + 1}. ${r.name.ar} — ${r.sizeSqm} م² — يتسع لـ ${r.maxGuests} — ${r.basePrice} جنيه/الليلة`,
+      )
+      .join("\n");
+
+    return `${hotel.name.ar} — الغرف المتاحة:\n${roomsText}\n\nاختار رقم الغرفة أو قولّي اسمها`;
+  };
+
+  // ── خطوة 3: حل اختيار الغرفة والتنقل لصفحة المراجعة ──
+  const handleSelectRoom = (selector: string): string => {
+    const { hotel, rooms } = lastRoomListRef.current;
+    if (!hotel || rooms.length === 0) {
+      return "محتاج تختار فندق الأول قبل ما تختار غرفة 🙂";
+    }
+
+    let room: RoomOption | undefined;
+
+    const asNumber = parseInt(selector.trim(), 10);
+    if (!isNaN(asNumber) && rooms[asNumber - 1]) {
+      room = rooms[asNumber - 1];
+    } else {
+      room = rooms.find(
+        (r) =>
+          r.name.ar.includes(selector) ||
+          r.name.en.toLowerCase().includes(selector.toLowerCase()),
+      );
+    }
+
+    if (!room) {
+      return "معرفتش أحدد الغرفة دي، جرب تكتب رقمها من القائمة اللي فاتت";
+    }
+
+    // نحدّث بيانات البحث في Redux عشان صفحة المراجعة تلاقي التواريخ والضيوف
+    const criteria = lastSearchCriteriaRef.current;
+    dispatch(
+      setStaySearchData({
+        destination: { key: hotel.location.ar, label: hotel.location.ar },
+        checkIn: criteria.checkIn ?? null,
+        checkOut: criteria.checkOut ?? null,
+        adults: criteria.adults ?? 2,
+        children: criteria.children ?? 0,
+      }),
+    );
+
+    router.push(`/feature/stays/${hotel.id}/checkOut?roomId=${room.id}`);
+
+    return `تمام، اخترت ${room.name.ar} في ${hotel.name.ar} — راجع بياناتك في صفحة تأكيد الحجز وكمّل من هناك`;
+  };
+
+  useRegisterAiHandlers({
+    onRecommendHotels: handleRecommendHotels,
+    onSelectHotel: handleSelectHotel,
+    onSelectRoom: handleSelectRoom,
+  });
 
   return (
     <div>
@@ -154,13 +215,22 @@ export default function StaysPage() {
         <StaySearchBar onSearch={handleSearch} />
       </div>
       <div className="h-[1px] w-full bg-border mx-auto" />
-      <div className="mx-auto my-4 w-[90%]">
-        <StayResultsPage
-          hotels={mockHotels}
-          filters={filters}
-          onFiltersChange={setFilters}
-        />
-      </div>
+
+      {searchData && (
+        <div className="mx-auto my-4 w-[90%]">
+          <StayResultsPage
+            hotels={mockHotels}
+            filters={filters}
+            onFiltersChange={setFilters}
+          />
+        </div>
+      )}
+
+      {/* <AiAssistant
+        onRecommendHotels={handleRecommendHotels}
+        onSelectHotel={handleSelectHotel}
+        onSelectRoom={handleSelectRoom}
+      /> */}
     </div>
   );
 }

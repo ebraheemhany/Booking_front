@@ -32,7 +32,12 @@
   },
   "SideMenu": {
     "createAccount": "Создать аккаунт",
-    "login": "Вход"
+    "login": "Вход",
+    "limousine": "Лимузин",
+    "fastTrack": "Fast Track",
+    "stays": "Проживание",
+    "bookingPage": "Мои бронирования",
+    "profilePage": "Профиль"
   },
   "Footer": {
     "tagline": "Маршрут... У каждого путешествия своя история",
@@ -630,6 +635,62 @@
     "downloadReceipt": "Скачать квитанцию",
     "backToHome": "На главную"
   },
+  "Bookings": {
+    "title": "Ваши бронирования",
+    "subtitle": "Все ваши поездки и бронирования в одном месте — лимузины, Fast Track, автомобили и отели.",
+    "tabAll": "Все",
+    "tabUpcoming": "Предстоящие",
+    "tabDone": "Прошлые",
+    "tabCancelled": "Отменённые",
+    "statusUpcoming": "Предстоящее",
+    "statusDone": "Завершено",
+    "statusCancelled": "Отменено",
+    "emptyTitle": "Здесь нет бронирований",
+    "emptyDescription": "Бронирования в этом разделе появятся здесь.",
+    "bookingNumber": "Бронирование {ref}",
+    "actionDetails": "Подробнее",
+    "actionCancel": "Отменить бронирование",
+    "actionInvoice": "Квитанция",
+    "actionBookAgain": "Забронировать снова"
+  },
+  "Profile": {
+    "memberSince": "Участник с марта 2025 года",
+    "tier": "Серебряное членство",
+    "editPhoto": "Изменить фото",
+    "verified": "Подтверждено",
+    "contactTitle": "Контактные данные",
+    "personalTitle": "Личные данные",
+    "addressesTitle": "Сохранённые адреса",
+    "paymentsTitle": "Способы оплаты",
+    "securityTitle": "Вход и безопасность",
+    "edit": "Изменить",
+    "save": "Сохранить",
+    "addAddress": "Добавить адрес",
+    "addPayment": "Добавить карту",
+    "default": "По умолчанию",
+    "connected": "Подключено",
+    "connect": "Подключить",
+    "deleteTitle": "Удалить аккаунт",
+    "deleteDescription": "Ваши данные и бронирования будут удалены навсегда без возможности восстановления.",
+    "totalBookings": "Всего бронирований",
+    "completedTrips": "Завершённые поездки",
+    "loyaltyPoints": "Бонусные баллы",
+    "fullName": "Полное имя",
+    "birthDate": "Дата рождения",
+    "gender": "Пол",
+    "nationalId": "Удостоверение личности",
+    "preferredLanguage": "Предпочтительный язык",
+    "currency": "Валюта",
+    "home": "Дом",
+    "work": "Работа",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "password": "Пароль",
+    "passwordChanged": "Изменено 4 месяца назад",
+    "phone": "Номер телефона",
+    "otpVerification": "Для проверки через OTP",
+    "expiresOn": "Истекает"
+  },
   "countries": {
     "EG": "Египет",
     "SA": "Саудовская Аравия",
@@ -648,5 +709,22 @@
     "SD": "Судан",
     "US": "Соединенные Штаты",
     "GB": "Великобритания"
+  },
+  "aiAssistant": {
+    "title": "Помощник Masar",
+    "inputPlaceholder": "Введите ваш запрос...",
+    "connectionError": "Произошла ошибка соединения",
+    "tool": {
+      "tripFilled": "Данные поездки заполнены, проверьте их и нажмите «Искать».",
+      "navigated": "Страница открыта",
+      "pageOnly": "Эта функция доступна только на странице {page}",
+      "done": "Готово",
+      "noCarMatch": "Извините, сейчас нет автомобилей, соответствующих этим критериям 😕",
+      "carChosen": "Вы выбрали {carName} — проверьте свои данные на странице подтверждения и продолжите оформление."
+    },
+    "pages": {
+      "carBooking": "Бронирование автомобилей",
+      "hotelBooking": "Бронирование отелей"
+    }
   }
 }

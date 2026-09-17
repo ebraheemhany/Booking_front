@@ -32,7 +32,12 @@
   },
   "SideMenu": {
     "createAccount": "Create an Account",
-    "login": "Log In"
+    "login": "Log In",
+    "limousine": "Limousine",
+    "fastTrack": "Fast Track",
+    "stays": "Stays",
+    "bookingPage": "My bookings",
+    "profilePage": "Profile"
   },
   "Footer": {
     "tagline": "A Journey... Every Journey Has a Story",
@@ -627,6 +632,62 @@
     "downloadReceipt": "Download Receipt",
     "backToHome": "Back to Home"
   },
+  "Bookings": {
+    "title": "Your bookings",
+    "subtitle": "All your trips and bookings in one place — limousine, fast track, cars, and stays.",
+    "tabAll": "All",
+    "tabUpcoming": "Upcoming",
+    "tabDone": "Past",
+    "tabCancelled": "Cancelled",
+    "statusUpcoming": "Upcoming",
+    "statusDone": "Completed",
+    "statusCancelled": "Cancelled",
+    "emptyTitle": "No bookings here",
+    "emptyDescription": "Your bookings in this section will appear here.",
+    "bookingNumber": "Booking {ref}",
+    "actionDetails": "Details",
+    "actionCancel": "Cancel booking",
+    "actionInvoice": "Invoice",
+    "actionBookAgain": "Book again"
+  },
+  "Profile": {
+    "memberSince": "Member since March 2025",
+    "tier": "Silver membership",
+    "editPhoto": "Edit photo",
+    "verified": "Verified",
+    "contactTitle": "Contact details",
+    "personalTitle": "Personal details",
+    "addressesTitle": "Saved addresses",
+    "paymentsTitle": "Payment methods",
+    "securityTitle": "Login and security",
+    "edit": "Edit",
+    "save": "Save",
+    "addAddress": "Add address",
+    "addPayment": "Add card",
+    "default": "Default",
+    "connected": "Connected",
+    "connect": "Connect",
+    "deleteTitle": "Delete account",
+    "deleteDescription": "Your data and bookings will be permanently deleted and cannot be recovered.",
+    "totalBookings": "Total bookings",
+    "completedTrips": "Completed trips",
+    "loyaltyPoints": "Loyalty points",
+    "fullName": "Full name",
+    "birthDate": "Date of birth",
+    "gender": "Gender",
+    "nationalId": "National ID",
+    "preferredLanguage": "Preferred language",
+    "currency": "Currency",
+    "home": "Home",
+    "work": "Work",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "password": "Password",
+    "passwordChanged": "Last changed 4 months ago",
+    "phone": "Mobile number",
+    "otpVerification": "For OTP verification",
+    "expiresOn": "Expires on"
+  },
   "countries": {
     "EG": "Egypt",
     "SA": "Saudi Arabia",
@@ -645,5 +706,22 @@
     "SD": "Sudan",
     "US": "United States",
     "GB": "United Kingdom"
+  },
+  "aiAssistant": {
+    "title": "Masar Assistant",
+    "inputPlaceholder": "Type your request...",
+    "connectionError": "A connection error occurred",
+    "tool": {
+      "tripFilled": "Trip details have been filled out. Please review them and click search.",
+      "navigated": "Page opened successfully",
+      "pageOnly": "This feature is only available on the {page} page",
+      "done": "Done",
+      "noCarMatch": "Sorry, no car matches these criteria right now 😕",
+      "carChosen": "You selected {carName} — review your details on the checkout page and proceed from there."
+    },
+    "pages": {
+      "carBooking": "Car Rental",
+      "hotelBooking": "Hotel Booking"
+    }
   }
 }

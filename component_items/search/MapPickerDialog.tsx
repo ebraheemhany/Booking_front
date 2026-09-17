@@ -76,7 +76,7 @@ export function MapPickerDialog({
   );
   const [address, setAddress] = useState(initialLocation?.address ?? "");
   const [loadingAddress, setLoadingAddress] = useState(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const reverseGeocode = useCallback(async (lat: number, lng: number) => {
     setLoadingAddress(true);

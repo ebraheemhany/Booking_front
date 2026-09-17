@@ -59,7 +59,7 @@ export default function TopBar() {
             <ChevronDown className="h-3 w-3" />
           </button>
 
-          <div className="min-[1026px]:hidden">
+          <div className="">
             <SideMenu
               trigger={
                 <button

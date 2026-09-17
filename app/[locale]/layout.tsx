@@ -11,6 +11,9 @@ import { Footer } from "@/component_items/footer";
 import { routing } from "@/i18n/routing";
 import { CurrencyProvider } from "@/component_items/context/CurrencyContext";
 import StoreProvider from "@/store/StoreProvider";
+import { AiAssistantProvider } from "@/component_items/agent/AiAssistantContext";
+import { AiAssistant } from "@/component_items/agent/AiAssistant";
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
@@ -54,13 +57,16 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <CurrencyProvider>
             <ThemeProvider>
-              <StoreProvider>
-                <QueryProvider>
-                  <Header />
-                  {children}
-                  <Footer />
-                </QueryProvider>
-              </StoreProvider>
+              <AiAssistantProvider>
+                <StoreProvider>
+                  <QueryProvider>
+                    <Header />
+                    {children}
+                    <AiAssistant />
+                    <Footer />
+                  </QueryProvider>
+                </StoreProvider>
+              </AiAssistantProvider>
             </ThemeProvider>
           </CurrencyProvider>
         </NextIntlClientProvider>

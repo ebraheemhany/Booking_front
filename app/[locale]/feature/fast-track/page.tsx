@@ -16,6 +16,8 @@ import { SearchResultsPage } from "@/component_items/search/SearchResultsPage";
 import type { FiltersState } from "@/component_items/search/FiltersSheet";
 import type { CarCardData } from "@/component_items/cars/CarCard";
 import { SignInBanner } from "@/component_items/SignInBanner";
+import { resolveLocation } from "@/component_items/agent/resolveLocation";
+import { useRegisterAiHandlers } from "@/component_items/agent/AiAssistantContext";
 
 import type { AppDispatch } from "@/store/store";
 import { setBookingData } from "@/store/slices/bookingSlice";
@@ -235,6 +237,114 @@ export default function FastTrackPage() {
 
     router.push(`/feature/lemozeen/${car.specs.id}/booking`);
   };
+
+  const handleAiFillTripSearch = async (data: {
+    tripType?: "arrival" | "departure" | "private" | "dailyRental";
+    fromLocation?: string;
+    toLocation?: string;
+    date?: string;
+    time?: string;
+    passengers?: number;
+  }) => {
+    const [pointA, pointB] = await Promise.all([
+      resolveLocation(data.fromLocation),
+      resolveLocation(data.toLocation),
+    ]);
+
+    setTripData((prev) => ({
+      ...prev,
+      tripType:
+        data.tripType && ["arrival", "departure"].includes(data.tripType)
+          ? data.tripType
+          : prev.tripType,
+      pointA: pointA ?? prev.pointA,
+      pointB: pointB ?? prev.pointB,
+      date: data.date ? new Date(data.date) : prev.date,
+      time: data.time ?? prev.time,
+      passengers: data.passengers ?? prev.passengers,
+    }));
+  };
+
+  const handleAiBookCar = async (criteria: {
+    tripType: "arrival" | "departure" | "private" | "dailyRental";
+    fromLocation?: string;
+    toLocation?: string;
+    date: string;
+    time?: string;
+    passengers?: number;
+    preferredCategory?: string;
+    maxBudget?: number;
+  }) => {
+    if (!["arrival", "departure"].includes(criteria.tripType)) {
+      return {
+        success: false,
+        message: "ميزة فاست تراك متاحة بس للرحلات من المطار أو للمطار فقط",
+      };
+    }
+
+    let candidates = mockCars;
+
+    if (criteria.preferredCategory) {
+      candidates = candidates.filter(
+        (car) => car.specs.category === criteria.preferredCategory,
+      );
+    }
+
+    if (criteria.maxBudget) {
+      const maxBudget = criteria.maxBudget;
+      candidates = candidates.filter(
+        (car) =>
+          (car.pricing[criteria.tripType]?.price ?? Infinity) <=
+          maxBudget,
+      );
+    }
+
+    if (candidates.length === 0) {
+      return {
+        success: false,
+        message: "معلش، مفيش عربية مناسبة لاحتياجك في فاست تراك دلوقتي 😕",
+      };
+    }
+
+    const chosenCar = candidates.reduce((cheapest, current) => {
+      const cheapestPrice =
+        cheapest.pricing[criteria.tripType]?.price ?? Infinity;
+      const currentPrice =
+        current.pricing[criteria.tripType]?.price ?? Infinity;
+      return currentPrice < cheapestPrice ? current : cheapest;
+    });
+
+    const [pointA, pointB] = await Promise.all([
+      resolveLocation(criteria.fromLocation),
+      resolveLocation(criteria.toLocation),
+    ]);
+
+    dispatch(
+      setBookingData({
+        source: "fastTrack",
+        tripType: criteria.tripType,
+        pickup: pointA,
+        dropoff: pointB,
+        date: criteria.date,
+        time: criteria.time ?? "",
+        passengers: criteria.passengers ?? 1,
+        luggage: 0,
+        selectedCar: chosenCar,
+      }),
+    );
+
+    router.push(`/feature/lemozeen/${chosenCar.specs.id}/booking`);
+
+    return {
+      success: true,
+      message: `اخترتلك ${chosenCar.specs.name.ar} — راجع بياناتك في صفحة تأكيد الحجز وكمّل من هناك`,
+    };
+  };
+
+  useRegisterAiHandlers({
+    onFillTripSearch: handleAiFillTripSearch,
+    onBookCar: handleAiBookCar,
+  });
 
   return (
     <div>

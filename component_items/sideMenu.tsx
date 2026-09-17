@@ -8,15 +8,19 @@ import {
   X,
   ArrowRight,
   ChevronDown,
+  ShoppingCart,
+  User,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { FaFacebook, FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 
 const navLinks = [
-  { key: "limousine", href: "/limousine", icon: CarTaxiFront },
-  { key: "fastTrack", href: "/fast-track", icon: PlaneTakeoff },
-  { key: "stays", href: "/stays", icon: Bed },
+  { key: "limousine", href: "/feature/lemozeen", icon: CarTaxiFront },
+  { key: "fastTrack", href: "/feature/fast-track", icon: PlaneTakeoff },
+  { key: "stays", href: "/feature/stays", icon: Bed },
+  { key: "bookingPage", href: "/feature/BookingPage", icon: ShoppingCart },
+  { key: "profilePage", href: "/feature/profile_page", icon: User },
 ] as const;
 
 const socialLinks = [
@@ -39,7 +43,6 @@ export default function SideMenu({
   currency,
   onLanguageClick,
 }: Props) {
-  const t = useTranslations("Nav");
   const tMenu = useTranslations("SideMenu");
 
   return (
@@ -48,7 +51,7 @@ export default function SideMenu({
 
       <SheetContent
         side="right"
-        className="w-[300px] border-l border-[#C9A96E]/20 bg-[#0B1E3D] p-0 text-white [&>button]:hidden "
+        className="w-75 border-l border-[#C9A96E]/20 bg-[#0B1E3D] p-0 text-white [&>button]:hidden "
       >
         <div className="flex h-full flex-col">
           {/* Header جوه المنيو */}
@@ -77,7 +80,7 @@ export default function SideMenu({
                     <Icon className="h-4.5 w-4.5" />
                   </span>
                   <span className="text-sm font-medium tracking-wide">
-                    {t(link.key)}
+                    {tMenu(link.key)}
                   </span>
                   <ArrowRight className="ml-auto h-4 w-4 opacity-0 transition-opacity group-hover:opacity-60" />
                 </Link>
@@ -86,7 +89,7 @@ export default function SideMenu({
           </nav>
 
           {/* فاصل ذهبي رفيع */}
-          <div className="mx-6 my-2 h-px bg-gradient-to-r from-transparent via-[#C9A96E]/30 to-transparent" />
+          <div className="mx-6 my-2 h-px bg-linear-to-r from-transparent via-[#C9A96E]/30 to-transparent" />
 
           {/* زرار اللغة والعملة */}
           <div className="px-4 pt-4">

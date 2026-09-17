@@ -14,15 +14,14 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // لازم نستنى الـ mount عشان نتجنب hydration mismatch
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
   return (
     <div className="flex items-center gap-3">
-      <span className="text-sm text-muted-foreground">Display mode</span>
+      <span className="text-sm text-muted-foreground">الوضع</span>
 
-      <div className="flex items-center gap-1 rounded-full bg-muted p-1">
+      <div className="flex items-center gap-1 rounded-full border border-border bg-muted/80 p-1 shadow-sm backdrop-blur-sm">
         {options.map((option) => {
           const Icon = option.icon;
           const isActive = theme === option.value;
