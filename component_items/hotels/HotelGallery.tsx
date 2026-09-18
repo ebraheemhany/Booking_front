@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { LayoutGrid, MapPin, Star, X } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import Image from "next/image";
 
 interface HotelGalleryProps {
   images: string[];
@@ -32,22 +33,27 @@ export function HotelGallery({
         <div className="grid h-[280px] grid-cols-1 gap-1 sm:h-[420px] sm:grid-cols-4 sm:grid-rows-2 sm:gap-1.5">
           {/* الصورة الرئيسية — تاخد نص العرض وكل الارتفاع */}
           <div className="relative col-span-1 row-span-1 h-full overflow-hidden sm:col-span-2 sm:row-span-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={mainImage}
               alt={hotelName}
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              fill
+              sizes="(max-width: 640px) 100vw, 50vw"
+              className="object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
 
           {/* 4 صور فرعية — شبكة 2×2 بجانب الرئيسية، تختفي على الموبايل */}
           {gridImages.map((img, i) => (
-            <div key={i} className="relative hidden overflow-hidden sm:block">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div
+              key={i}
+              className="relative hidden h-full overflow-hidden sm:block"
+            >
+              <Image
                 src={img}
                 alt={`${hotelName} ${i + 2}`}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                fill
+                sizes="25vw"
+                className="object-cover transition-transform duration-300 hover:scale-105"
               />
               {/* تراكب "+N صورة" على آخر صورة في الشبكة */}
               {i === gridImages.length - 1 && remainingCount > 0 && (
@@ -95,7 +101,7 @@ export function HotelGallery({
         {/* زرار عرض كل الصور — عائم في الزاوية زي المواقع العالمية */}
         <button
           onClick={() => setAllPhotosOpen(true)}
-          className="absolute bottom-4 end-4 z-10 flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold text-black shadow-md transition-colors hover:bg-white/90"
+          className="absolute bottom-4 end-4 z-10 flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold text-foreground shadow-md transition-colors hover:bg-white/90"
         >
           <LayoutGrid className="h-4 w-4" />
           {t("viewAllPhotos", { count: images.length })}
@@ -121,11 +127,12 @@ export function HotelGallery({
                 key={i}
                 className="relative aspect-[4/3] overflow-hidden rounded-lg"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={img}
                   alt={`${hotelName} ${i + 1}`}
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
             ))}

@@ -1,5 +1,6 @@
 import { GoogleGenAI, Type, type FunctionDeclaration } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
+import { franc } from "franc";
 import { SITE_KNOWLEDGE } from "./siteKnowledge";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
@@ -12,18 +13,32 @@ const LOCALE_NAMES: Record<string, string> = {
   uk: "Ukrainian",
   es: "Spanish",
   pl: "Polish",
-  // ضيف أي لغة تانية عندك في next-intl config
 };
 
-function buildSystemPrompt(locale: string) {
-  const fallbackLanguage = LOCALE_NAMES[locale] ?? "Arabic";
+// ← تحويل كود franc (ISO 639-3) لكود اللوكيل بتاعنا
+const FRANC_TO_LOCALE: Record<string, string> = {
+  arb: "ar",
+  eng: "en",
+  deu: "de",
+  rus: "ru",
+  ukr: "uk",
+  spa: "es",
+  pol: "pl",
+};
+
+// ← بنحدد اللغة إحنا من نص الرسالة نفسها، مش بنسيب الموديل يخمّن
+function detectLocaleFromText(text: string, fallback: string): string {
+  if (!text || text.trim().length < 3) return fallback;
+  const code = franc(text, { minLength: 3 });
+  return FRANC_TO_LOCALE[code] ?? fallback;
+}
+
+function buildSystemPrompt(resolvedLocale: string) {
+  const languageName = LOCALE_NAMES[resolvedLocale] ?? "Arabic";
 
   return `أنت المساعد الذكي لموقع "مسار" — منصة حجز عربيات وفنادق في مصر.
 
-**مهم جدًا بخصوص اللغة:**
-- رد دايمًا بنفس اللغة اللي المستخدم كتب بيها آخر رسالة، من ضمن اللغات المتاحة في الموقع: العربية، الإنجليزية، الألمانية، الروسية، الأوكرانية، الإسبانية، البولندية.
-- لو المستخدم غيّر اللغة في نص المحادثة (مثلاً كتب عربي وبعدين إنجليزي)، اتبع آخر لغة كتب بيها هو، مش أول رسالة.
-- استخدم ${fallbackLanguage} كلغة افتراضية بس لو أول رسالة في المحادثة ومفيش نص كافي تحدد بيه اللغة (زي رسالة فاضية أو رموز بس).
+**تعليمة إلزامية غير قابلة للتفاوض: لازم ترد بـ${languageName} فقط، في كل الرسالة، من غير أي استثناء — حتى لو المعلومات اللي فوق دي مكتوبة عربي.**
 
 ${SITE_KNOWLEDGE}
 
@@ -39,7 +54,9 @@ ${SITE_KNOWLEDGE}
 
 قواعد عامة:
 - متقولش "تم الحجز" — الحجز النهائي بإيد المستخدم دايمًا.
-- لو سؤال عام، جاوب من المعلومات اللي عندك فوق مباشرة من غير أداة.`;
+- لو سؤال عام، جاوب من المعلومات اللي عندك فوق مباشرة من غير أداة.
+
+**تذكير أخير: الرد كله، من أول كلمة لآخر كلمة، لازم يكون بـ${languageName}.**`;
 }
 
 const functionDeclarations: FunctionDeclaration[] = [
@@ -223,7 +240,13 @@ export async function POST(req: NextRequest) {
     locale = body.locale ?? "ar";
     const { messages } = body;
 
-    const systemPrompt = buildSystemPrompt(locale);
+    // ← بندوّر على آخر رسالة من المستخدم (مش من الموديل) ونحدد لغتها فعليًا
+    const lastUserMessage =
+      [...messages].reverse().find((m: { role: string }) => m.role === "user")
+        ?.content ?? "";
+    const resolvedLocale = detectLocaleFromText(lastUserMessage, locale);
+
+    const systemPrompt = buildSystemPrompt(resolvedLocale);
 
     const contents = messages.map((m: { role: string; content: string }) => ({
       role: m.role === "assistant" ? "model" : "user",

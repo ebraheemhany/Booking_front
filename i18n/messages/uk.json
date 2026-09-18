@@ -204,7 +204,7 @@
     "services": {
       "airportPickup": "Зустріч та прискорена процедура оформлення в аеропорту Каїра",
       "privateDriver": "Ваш особистий водій — професіонал, який володіє англійською мовою",
-      "curatedStays": "Ретельно підібрані помешкання від EasyRent",
+      "curatedStays": "Ретельно підібрані помешкання від Masar",
       "singlePayment": "Одне підтвердження та одна сума"
     }
   },
@@ -588,7 +588,27 @@
     "noChargeYet": "Списання коштів поки не здійснюється",
     "contactConcierge": "Зв'язатися з консьєржем у WhatsApp",
     "guestsSummary": "{adults, plural, one {# дорослий} few {# дорослих} many {# дорослих} other {# дорослих}}{children, plural, =0 {} one {, # дитина} few {, # дитини} many {, # дітей} other {, # дітей}}",
-    "nightsCount": "{count, plural, one {# ніч} few {# ночі} many {# ночей} other {# ночей}}"
+    "nightsCount": "{count, plural, one {# ніч} few {# ночі} many {# ночей} other {# ночей}}",
+    "amenity_wifi": "Безкоштовний Wi-Fi",
+  "amenity_pool": "Басейн",
+  "amenity_parking": "Автостоянка",
+  "amenity_petFriendly": "Дозволено з тваринами",
+  "amenity_gym": "Тренажерний зал",
+  "amenity_spa": "Спа-центр",
+  
+  "amenity_airConditioning": "Кондиціонер",
+  "amenity_seaView": "Вид на море",
+  "amenity_kitchen": "Кухня",
+  "amenity_tv": "Телевізор",
+  "amenity_workspace": "Робоча зона",
+  "amenity_elevator": "Ліфт",
+  "amenity_laundry": "Послуги пральні",
+
+  "amenity_bar": "Бар",
+  "amenity_kidsClub": "Дитячий клуб",
+  "amenity_beachAccess": "Прямий вихід до пляжу",
+  "amenity_roomService": "Обслуговування номерів",
+  "searchRequired": "Будь ласка, вкажіть напрямок та дати проживання перед переглядом деталей готелю"
   },
   "Checkout": {
     "pageTitle": "Один крок до вашої подорожі",
@@ -724,6 +744,14 @@
     "pages": {
       "carBooking": "Бронювання авто",
       "hotelBooking": "Бронювання готелів"
-    }
+    },
+  "suggestions": {
+    "title": "Ви можете запитати мене, наприклад:",
+    "diffFastTrackLemozeen": "Яка різниця між Fast Track та лімузином?",
+    "whatIsLemozeen": "Що таке послуга «Лімузин»?",
+    "whatIsFastTrack": "Що таке послуга Fast Track?",
+    "bestHotels": "Які найкращі готелі у вас є?"
   }
+  }
+
 }

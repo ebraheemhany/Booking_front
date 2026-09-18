@@ -155,7 +155,7 @@ export function CarDetailsView({
           </div>
 
           <Link
-            href={`/feature/lemozeen/${specs.id}/booking`}
+            href={`/feature/lemozeen`}
             onClick={onBookNow}
             className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-amber-500 font-bold text-black transition-colors hover:bg-amber-400"
           >

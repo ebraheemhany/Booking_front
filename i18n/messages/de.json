@@ -204,7 +204,7 @@
     "services": {
       "airportPickup": "Empfang und Express-Abfertigung am Flughafen Kairo",
       "privateDriver": "Ihr persönlicher Fahrer – professionell und englischsprachig",
-      "curatedStays": "Sorgfältig ausgewählte Unterkünfte von EasyRent",
+      "curatedStays": "Sorgfältig ausgewählte Unterkünfte von Masar",
       "singlePayment": "Eine Bestätigung und ein Betrag"
     }
   },
@@ -557,9 +557,9 @@
     "amenity_checkoutHour": "Check-out-Zeit",
     "amenity_checkinHour": "Check-in-Zeit",
     "amenity_hotelSafe": "Tresor",
-    "amenity_breakfast": "Frühstück",
+   
     "amenity_reception24": "24-Stunden-Rezeption",
-    "amenity_restaurant": "Restaurant",
+   
     "clearAll": "Alles zurücksetzen",
     "showResults": "Ergebnisse anzeigen ({count})",
     "filter": "Filter",
@@ -586,7 +586,27 @@
     "noChargeYet": "Es wird noch nichts abbucht",
     "contactConcierge": "Concierge über WhatsApp kontaktieren",
     "guestsSummary": "{adults, plural, one {1 Erwachsener} other {# Erwachsene}}{children, plural, =0 {} one {, 1 Kind} other {, # Kinder}}",
-    "nightsCount": "{count, plural, one {1 Nacht} other {# Nächte}}"
+    "nightsCount": "{count, plural, one {1 Nacht} other {# Nächte}}",
+    "amenity_wifi": "Kostenloses WLAN",
+  "amenity_pool": "Schwimmbad",
+  "amenity_parking": "Parkplatz",
+  "amenity_petFriendly": "Haustiere erlaubt",
+  "amenity_gym": "Fitnessraum",
+  "amenity_spa": "Spa-Bereich",
+  "amenity_breakfast": "Frühstück verfügbar",
+  "amenity_airConditioning": "Klimaanlage",
+  "amenity_seaView": "Meerblick",
+  "amenity_kitchen": "Küche",
+  "amenity_tv": "Fernseher",
+  "amenity_workspace": "Arbeitsplatz",
+  "amenity_elevator": "Aufzug",
+  "amenity_laundry": "Wäscheservice",
+  "amenity_restaurant": "Restaurant",
+  "amenity_bar": "Bar",
+  "amenity_kidsClub": "Kinderclub",
+  "amenity_beachAccess": "Direkter Strandzugang",
+  "amenity_roomService": "Zimmerservice",
+  "searchRequired": "Bitte geben Sie zuerst Ihr Reiseziel und die Aufenthaltsdaten ein, bevor Sie die Hoteldetails öffnen"
   },
   "Checkout": {
     "pageTitle": "Nur noch ein Schritt bis zu Ihrer Reise",
@@ -722,6 +742,13 @@
     "pages": {
       "carBooking": "Mietwagenbuchung",
       "hotelBooking": "Hotelbuchung"
-    }
+    },
+  "suggestions": {
+    "title": "Sie können mich zum Beispiel fragen:",
+    "diffFastTrackLemozeen": "Was ist der Unterschied zwischen Fast Track und Limousine?",
+    "whatIsLemozeen": "Was ist der Limousinenservice?",
+    "whatIsFastTrack": "Was ist der Fast-Track-Service?",
+    "bestHotels": "Welche sind die besten Hotels, die Sie anbieten?"
+  }
   }
 }

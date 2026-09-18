@@ -204,7 +204,7 @@
     "services": {
       "airportPickup": "Recepción y tramitación rápida en el aeropuerto de El Cairo",
       "privateDriver": "Tu conductor privado: profesional y que habla inglés",
-      "curatedStays": "Alojamientos cuidadosamente seleccionados por EasyRent",
+      "curatedStays": "Alojamientos cuidadosamente seleccionados por Masar",
       "singlePayment": "Una confirmación y un importe"
     }
   },
@@ -585,7 +585,27 @@
     "noChargeYet": "No se te cobrará nada aún",
     "contactConcierge": "Hablar con el conserje por WhatsApp",
     "guestsSummary": "{adults, plural, one {1 adulto} other {# adultos}}{children, plural, =0 {} one {, 1 niño} other {, # niños}}",
-    "nightsCount": "{count, plural, one {1 noche} other {# noches}}"
+    "nightsCount": "{count, plural, one {1 noche} other {# noches}}",
+    "amenity_wifi": "Wi-Fi gratis",
+  "amenity_pool": "Piscina",
+  "amenity_parking": "Aparcamiento",
+  "amenity_petFriendly": "Se admiten mascotas",
+  "amenity_gym": "Gimnasio",
+  "amenity_spa": "Spa",
+
+  "amenity_airConditioning": "Aire acondicionado",
+  "amenity_seaView": "Vistas al mar",
+  "amenity_kitchen": "Cocina",
+  "amenity_tv": "Televisión",
+  "amenity_workspace": "Zona de trabajo",
+  "amenity_elevator": "Ascensor",
+  "amenity_laundry": "Servicio de lavandería",
+
+  "amenity_bar": "Bar",
+  "amenity_kidsClub": "Club infantil",
+  "amenity_beachAccess": "Acceso directo a la playa",
+  "amenity_roomService": "Servicio de habitaciones",
+  "searchRequired": "Por favor, introduce el destino y las fechas de estancia antes de ver los detalles del hotel"
   },
   "Checkout": {
     "pageTitle": "A un solo paso de tu viaje",
@@ -721,6 +741,13 @@
     "pages": {
       "carBooking": "Reserva de coches",
       "hotelBooking": "Reserva de hoteles"
-    }
+    },
+  "suggestions": {
+    "title": "Puedes preguntarme algo como:",
+    "diffFastTrackLemozeen": "¿Cuál es la diferencia entre Fast Track y Limusina?",
+    "whatIsLemozeen": "¿Qué es el servicio de limusina?",
+    "whatIsFastTrack": "¿Qué es el servicio Fast Track?",
+    "bestHotels": "¿Cuáles son los mejores hoteles que ofrecen?"
+  }
   }
 }

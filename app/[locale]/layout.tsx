@@ -13,7 +13,7 @@ import { CurrencyProvider } from "@/component_items/context/CurrencyContext";
 import StoreProvider from "@/store/StoreProvider";
 import { AiAssistantProvider } from "@/component_items/agent/AiAssistantContext";
 import { AiAssistant } from "@/component_items/agent/AiAssistant";
-
+import { Toaster } from "sonner";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
@@ -55,6 +55,7 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
+          <Toaster richColors position="top-center" />
           <CurrencyProvider>
             <ThemeProvider>
               <AiAssistantProvider>

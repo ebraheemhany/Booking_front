@@ -80,9 +80,9 @@ export function HotelCard({ hotel, layout = "grid", onView }: HotelCardProps) {
     return (
       <button
         onClick={() => onView(specs.id)}
-        className="flex w-full items-center gap-4 rounded-2xl border border-white/10 bg-[#0d1728] p-4 text-start transition-colors hover:bg-white/5"
+        className="flex w-full flex-col gap-3 rounded-2xl border border-white/10 bg-[#0d1728] p-3 text-start transition-colors hover:bg-white/5 min-[400px]:flex-row min-[400px]:items-center min-[400px]:gap-4 min-[400px]:p-4"
       >
-        <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-lg">
+        <div className="relative h-36 w-full shrink-0 overflow-hidden rounded-lg min-[400px]:h-20 min-[400px]:w-28">
           <Image
             src={specs.image}
             alt={specs.name[locale]}
@@ -90,24 +90,24 @@ export function HotelCard({ hotel, layout = "grid", onView }: HotelCardProps) {
             className="object-cover"
           />
         </div>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-2">
+        <div className="min-w-0 w-full flex-1 min-[400px]:w-auto">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="truncate text-sm font-bold text-white">
               {specs.name[locale]}
             </span>
-            <span className="text-xs text-white/40">
+            <span className="shrink-0 text-xs text-white/40">
               {t(roomTypeLabelKey[specs.roomType])}
             </span>
           </div>
-          <div className="mt-1 flex items-center gap-1.5 text-xs text-white/50">
+          <div className="mt-1 flex min-w-0 items-center gap-1.5 text-xs text-white/50">
             <MapPin className="h-3 w-3" />
-            {specs.location[locale]}
+            <span className="truncate">{specs.location[locale]}</span>
           </div>
           <div className="mt-1">{starsRow}</div>
         </div>
-        <div className="shrink-0 text-end">
+        <div className="flex w-full items-center justify-between border-t border-white/5 pt-2 text-end min-[400px]:w-auto min-[400px]:shrink-0 min-[400px]:flex-col min-[400px]:items-end min-[400px]:border-0 min-[400px]:pt-0">
           <p className="text-xs text-white/40">{t("perNight")}</p>
-          <p className="text-base font-bold text-white">
+          <p className="whitespace-nowrap text-base font-bold text-white">
             {isLoading ? "..." : `${formattedPrice} ${currency}`}
           </p>
         </div>

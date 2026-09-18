@@ -53,7 +53,7 @@ export default function TopBar() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setModalOpen(true)}
-            className="flex items-center gap-1 rounded-full bg-white/5 px-2.5 py-1 text-white/80 hover:bg-white/10"
+            className="hidden items-center gap-1 rounded-full bg-white/5 px-2.5 py-1 text-white/80 hover:bg-white/10 sm:flex"
           >
             {locale.toUpperCase()} - {currency}
             <ChevronDown className="h-3 w-3" />
@@ -76,7 +76,7 @@ export default function TopBar() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 mt-6 md:mt-4">
+        <div className="hidden items-center gap-4 sm:flex sm:mt-4">
           <Link
             href="/feature/login"
             className="hidden md:flex items-center gap-1 rounded-full border border-[#C9A96E]/30 px-3 py-1 text-[#C9A96E] transition-colors hover:bg-[#C9A96E]/10"

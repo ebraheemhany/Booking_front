@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 import { useConvertedPrice } from "@/hooks/useConvertedPrice";
 import { useLocale } from "next-intl";
@@ -9,6 +10,7 @@ interface Category {
   icon: React.ElementType;
   title: string;
   description: string;
+  href: string;
 }
 
 interface CategorySidebarProps {
@@ -18,6 +20,7 @@ interface CategorySidebarProps {
   featuredPriceFrom: number;
   featuredPriceUnit: string;
   featuredIcon: React.ElementType;
+  featuredHref: string;
   categories: Category[];
 }
 
@@ -28,6 +31,7 @@ export function CategorySidebar({
   featuredPriceFrom,
   featuredPriceUnit,
   featuredIcon: FeaturedIcon,
+  featuredHref,
   categories,
 }: CategorySidebarProps) {
   const { convertedPrice, currency } = useConvertedPrice(featuredPriceFrom);
@@ -37,7 +41,10 @@ export function CategorySidebar({
     <div className="flex flex-col gap-2">
       <p className="mb-1 text-sm text-white/50">{label}</p>
 
-      <button className="flex items-center justify-between gap-3 rounded-xl bg-[#101d33] p-3 text-start transition-colors hover:bg-[#152441]">
+      <Link
+        href={featuredHref}
+        className="flex items-center justify-between gap-3 rounded-xl bg-[#101d33] p-3 text-start transition-colors hover:bg-[#152441]"
+      >
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5">
           <FeaturedIcon className="h-4 w-4 text-white/70" />
         </div>
@@ -56,13 +63,14 @@ export function CategorySidebar({
         ) : (
           <ChevronRight className="h-4 w-4 shrink-0  text-white/40" />
         )}
-      </button>
+      </Link>
 
       {categories.map((cat) => {
         const Icon = cat.icon;
         return (
-          <button
+          <Link
             key={cat.title}
+            href={cat.href}
             className="flex items-center justify-between gap-3 rounded-xl bg-[#0d1728] p-3 text-start transition-colors hover:bg-[#152441]"
           >
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5">
@@ -78,7 +86,7 @@ export function CategorySidebar({
             ) : (
               <ChevronRight className="h-4 w-4 shrink-0  text-white/40" />
             )}
-          </button>
+          </Link>
         );
       })}
     </div>

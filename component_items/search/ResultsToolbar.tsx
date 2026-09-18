@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import {
   SlidersHorizontal,
@@ -43,6 +44,18 @@ export function ResultsToolbar({
   whatsappNumber,
 }: ResultsToolbarProps) {
   const t = useTranslations("Filters");
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
+    const keepGridOnSmallScreens = () => {
+      if (mediaQuery.matches && view !== "grid") onViewChange("grid");
+    };
+
+    keepGridOnSmallScreens();
+    mediaQuery.addEventListener("change", keepGridOnSmallScreens);
+    return () =>
+      mediaQuery.removeEventListener("change", keepGridOnSmallScreens);
+  }, [onViewChange, view]);
 
   return (
     <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#0d1728] p-2">
@@ -103,7 +116,7 @@ export function ResultsToolbar({
         </DropdownMenu>
 
         {/* تبديل شكل العرض */}
-        <div className="flex items-center gap-1 rounded-lg border border-white/10 p-1">
+        <div className="hidden items-center gap-1 rounded-lg border border-white/10 p-1 sm:flex">
           <button
             onClick={() => onViewChange("list")}
             className={`flex h-7 w-9 items-center justify-center rounded-md transition-colors ${

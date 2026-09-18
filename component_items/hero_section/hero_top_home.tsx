@@ -99,7 +99,7 @@ const sectionImages: Record<string, string> = {
 //       offers: [
 //         {
 //           image: "/image/stay_1.png",
-//           badgeLabel: "EasyRent من الإقامات",
+//           badgeLabel: "Masar من الإقامات",
 //           title: "Kempinski Nile Hotel Garden City",
 //           rating: 5,
 //           priceFrom: 7889.5,
@@ -109,7 +109,7 @@ const sectionImages: Record<string, string> = {
 //         },
 //         {
 //           image: "/image/stay_1.png",
-//           badgeLabel: "EasyRent من الإقامات",
+//           badgeLabel: "Masar من الإقامات",
 //           title: "Al Masa Hotel Nasr City",
 //           rating: 5,
 //           priceFrom: 8144,
@@ -119,7 +119,7 @@ const sectionImages: Record<string, string> = {
 //         },
 //         {
 //           image: "/image/stay_1.png",
-//           badgeLabel: "EasyRent من الإقامات",
+//           badgeLabel: "Masar من الإقامات",
 //           title: "Pyramisa Suites Hotel Cairo",
 //           rating: 5,
 //           priceFrom: 6362.5,
@@ -129,7 +129,7 @@ const sectionImages: Record<string, string> = {
 //         },
 //         {
 //           image: "/image/stay_1.png",
-//           badgeLabel: "EasyRent من الإقامات",
+//           badgeLabel: "Masar من الإقامات",
 //           title: "Safir Cairo",
 //           rating: 5,
 //           priceFrom: 4581,
@@ -520,6 +520,13 @@ function useSections(): HeroSectionData[] {
 }
 
 function HeroSlide({ section }: { section: HeroSectionData }) {
+  const sectionHref =
+    section.id === "carRental"
+      ? "/feature/lemozeen"
+      : section.id === "stays"
+        ? "/feature/stays"
+        : "/feature/fast-track";
+
   return (
     <div className="grid gap-4 lg:grid-cols-[1.7fr_0.85fr] xl:grid-cols-[1.7fr_0.85fr_250px]">
       <div className="order-1">
@@ -535,7 +542,17 @@ function HeroSlide({ section }: { section: HeroSectionData }) {
 
       <div className="order-2 grid grid-cols-2 gap-2">
         {section.offers.map((offer) => (
-          <HotelCard key={offer.title} {...offer} />
+          <HotelCard
+            key={offer.title}
+            {...offer}
+            bookingHref={
+              section.id === "carRental"
+                ? "/feature/lemozeen/2/booking"
+                : section.id === "stays"
+                  ? "/feature/stays"
+                  : "/feature/fast-track"
+            }
+          />
         ))}
       </div>
 
@@ -547,7 +564,11 @@ function HeroSlide({ section }: { section: HeroSectionData }) {
           featuredPriceFrom={section.featuredPriceFrom}
           featuredPriceUnit={section.featuredPriceUnit}
           featuredIcon={section.featuredIcon}
-          categories={section.categories}
+          featuredHref={sectionHref}
+          categories={section.categories.map((category) => ({
+            ...category,
+            href: sectionHref,
+          }))}
         />
       </div>
     </div>

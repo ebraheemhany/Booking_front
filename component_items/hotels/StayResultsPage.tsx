@@ -3,28 +3,29 @@
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
+import { toast } from "sonner";
 import {
-  SlidersHorizontal,
-  LayoutGrid,
-  Rows3,
-  ArrowUpDown,
-} from "lucide-react";
+  ResultsToolbar,
+  type SortOption,
+  type ViewMode,
+} from "../search/ResultsToolbar";
 import { HotelCard, type HotelCardData } from "./HotelCard";
 import { HotelFiltersSheet, type HotelFiltersState } from "./HotelFiltersSheet";
-
-type SortOption = "featured" | "priceLow" | "priceHigh";
-type ViewMode = "grid" | "list";
+import type { RootState } from "@/store/store";
 
 interface StayResultsPageProps {
   hotels: HotelCardData[];
   filters: HotelFiltersState;
   onFiltersChange: (filters: HotelFiltersState) => void;
+  destination?: string;
 }
 
 export function StayResultsPage({
   hotels,
   filters,
   onFiltersChange,
+  destination,
 }: StayResultsPageProps) {
   const t = useTranslations("Hotels");
   const router = useRouter();
@@ -32,7 +33,13 @@ export function StayResultsPage({
   const [sort, setSort] = useState<SortOption>("featured");
   const [view, setView] = useState<ViewMode>("grid");
 
-  // نستخرج كل المرافق الفريدة الموجودة فعليًا في بيانات الفنادق
+  // ← بيانات البحث من Redux مباشرة
+  const staySearch = useSelector((state: RootState) => state.staySearch);
+
+  const hasSearched = Boolean(
+    staySearch.destination && staySearch.checkIn && staySearch.checkOut,
+  );
+
   const availableAmenities = useMemo(() => {
     const set = new Set<string>();
     hotels.forEach((h) => h.specs.amenities.forEach((a) => set.add(a)));
@@ -42,6 +49,15 @@ export function StayResultsPage({
   const filteredHotels = useMemo(() => {
     return hotels.filter((hotel) => {
       const { specs } = hotel;
+
+      if (
+        destination &&
+        destination.toLowerCase() !== "anywhere" &&
+        !specs.location.ar.includes(destination) &&
+        !specs.location.en.toLowerCase().includes(destination.toLowerCase())
+      ) {
+        return false;
+      }
 
       if (
         specs.pricePerNight < filters.minBudget ||
@@ -75,80 +91,32 @@ export function StayResultsPage({
         return list.sort(
           (a, b) => b.specs.pricePerNight - a.specs.pricePerNight,
         );
+      case "rating":
+        return list.sort((a, b) => b.specs.stars - a.specs.stars);
       default:
         return list;
     }
   }, [filteredHotels, sort]);
 
+  // ← المنع فعليًا هنا
+  const handleView = (id: string) => {
+    if (!hasSearched) {
+      toast.error(t("searchRequired"));
+      return;
+    }
+    router.push(`/feature/stays/${id}`);
+  };
+
   return (
     <div className="space-y-4">
-      {/* التولبار */}
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex flex-col sm:flex-row items-center gap-3">
-          <button
-            onClick={() => setFiltersOpen(true)}
-            className="flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white/5"
-          >
-            <SlidersHorizontal className="h-4 w-4" />
-            {t("filter")}
-          </button>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() =>
-                setSort((s) => (s === "featured" ? "priceLow" : "featured"))
-              }
-              className="flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2.5 text-sm text-white/80 hover:bg-white/5"
-            >
-              <ArrowUpDown className="h-3.5 w-3.5" />
-              {t(`sort_${sort}`)}
-            </button>
-
-            <div className="hidden sm:flex items-center rounded-lg border border-white/10">
-              <button
-                onClick={() => setView("list")}
-                className={`flex h-9 w-9 items-center justify-center ${
-                  view === "list" ? "bg-amber-400 rounded-lg text-black" : ""
-                }`}
-              >
-                <Rows3 className="h-4 w-4 " />
-              </button>
-              <button
-                onClick={() => setView("grid")}
-                className={`flex h-9 w-9 items-center justify-center ${
-                  view === "grid" ? "bg-amber-400 rounded-lg text-black" : ""
-                }`}
-              >
-                <LayoutGrid className="h-4 w-4 " />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center gap-5">
-          <span className="text-sm font-bold text-amber-500 ">
-            {t("stayCount", { count: sortedHotels.length })}
-          </span>
-          <div className="flex sm:hidden items-center rounded-lg border border-white/10">
-            <button
-              onClick={() => setView("list")}
-              className={`flex h-9 w-9 items-center justify-center ${
-                view === "list" ? "bg-amber-400 rounded-lg text-black" : ""
-              }`}
-            >
-              <Rows3 className="h-4 w-4 " />
-            </button>
-            <button
-              onClick={() => setView("grid")}
-              className={`flex h-9 w-9 items-center justify-center ${
-                view === "grid" ? "bg-amber-400 rounded-lg text-black" : ""
-              }`}
-            >
-              <LayoutGrid className="h-4 w-4 " />
-            </button>
-          </div>
-        </div>
-      </div>
+      <ResultsToolbar
+        sort={sort}
+        onSortChange={setSort}
+        view={view}
+        onViewChange={setView}
+        onOpenFilters={() => setFiltersOpen(true)}
+        whatsappNumber="201234567890"
+      />
 
       <HotelFiltersSheet
         open={filtersOpen}
@@ -176,7 +144,7 @@ export function StayResultsPage({
               key={hotel.specs.id}
               hotel={hotel}
               layout={view}
-              onView={(id) => router.push(`/feature/stays/${id}`)}
+              onView={handleView}
             />
           ))}
         </div>

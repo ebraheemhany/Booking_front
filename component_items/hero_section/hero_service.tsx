@@ -46,7 +46,7 @@ export function StaysHero({
           {badge}
         </span>
 
-        <h1 className="text-3xl font-extrabold leading-tight text-white md:text-4xl">
+        <h1 className="text-3xl font-extrabold text-destructive-foreground md:text-4xl">
           {title}
           <br />
           <span className="text-teal-300">Masar</span>

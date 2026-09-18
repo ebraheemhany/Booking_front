@@ -10,8 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 export default function TravelHero() {
@@ -22,10 +21,26 @@ export default function TravelHero() {
   const CtaChevron = isArabic ? ChevronLeft : ChevronRight;
 
   const services = [
-    { icon: Plane, title: t("services.airportPickup") },
-    { icon: CarFront, title: t("services.privateDriver") },
-    { icon: BedDouble, title: t("services.curatedStays") },
-    { icon: Ticket, title: t("services.singlePayment") },
+    {
+      icon: Plane,
+      title: t("services.airportPickup"),
+      href: "/feature/fast-track",
+    },
+    {
+      icon: CarFront,
+      title: t("services.privateDriver"),
+      href: "/feature/lemozeen",
+    },
+    {
+      icon: BedDouble,
+      title: t("services.curatedStays"),
+      href: "/feature/stays",
+    },
+    {
+      icon: Ticket,
+      title: t("services.singlePayment"),
+      href: "/feature/stays",
+    },
   ];
 
   return (
@@ -55,7 +70,8 @@ export default function TravelHero() {
           </div>
 
           {/* الزرار */}
-          <Button
+          <Link
+            href="/feature/stays"
             className="
               mt-7
               h-12
@@ -72,11 +88,12 @@ export default function TravelHero() {
               hover:bg-[#ffb52e]
               hover:scale-[1.02]
               cursor-pointer
+              flex items-center justify-center gap-2
             "
           >
             {t("cta")}
             <CtaChevron className="me-2 h-5 w-5" />
-          </Button>
+          </Link>
         </div>
 
         {/* =========================
@@ -89,8 +106,9 @@ export default function TravelHero() {
               const Icon = service.icon;
 
               return (
-                <div
+                <Link
                   key={index}
+                  href={service.href}
                   className="
                     flex items-center justify-between px-3 border-b border-border text-foreground hover:text-primary
                     hover:bg-[#2a303c] transition-all py-2
@@ -119,7 +137,7 @@ export default function TravelHero() {
                   ) : (
                     <ChevronRight className="h-5 w-5 text-gray-400 transition-transform" />
                   )}
-                </div>
+                </Link>
               );
             })}
           </div>

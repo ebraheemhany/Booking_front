@@ -204,7 +204,7 @@
     "services": {
       "airportPickup": "Odbiór i przyspieszona procedura na lotnisku w Kairze",
       "privateDriver": "Twój prywatny kierowca — profesjonalista, mówiący po angielsku",
-      "curatedStays": "Starannie wyselekcjonowane obiekty noclegowe od EasyRent",
+      "curatedStays": "Starannie wyselekcjonowane obiekty noclegowe od Masar",
       "singlePayment": "Jedno potwierdzenie i jedna kwota"
     }
   },
@@ -591,7 +591,27 @@
     "noChargeYet": "Opłata nie zostanie jeszcze pobrana",
     "contactConcierge": "Napisz do concierge na WhatsAppie",
     "guestsSummary": "{adults, plural, one {# dorosły} few {# dorosłych} many {# dorosłych} other {# dorosłych}}{children, plural, =0 {} one {, # dziecko} few {, # dzieci} many {, # dzieci} other {, # dzieci}}",
-    "nightsCount": "{count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}"
+    "nightsCount": "{count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}",
+    "amenity_wifi": "Bezpłatne Wi-Fi",
+  "amenity_pool": "Basen",
+  "amenity_parking": "Parking",
+  "amenity_petFriendly": "Zwierzęta są akceptowane",
+  "amenity_gym": "Siłownia",
+  "amenity_spa": "Spa",
+
+  "amenity_airConditioning": "Klimatyzacja",
+  "amenity_seaView": "Widok na morze",
+  "amenity_kitchen": "Kuchnia",
+  "amenity_tv": "Telewizor",
+  "amenity_workspace": "Miejsce do pracy",
+  "amenity_elevator": "Winda",
+  "amenity_laundry": "Usługi pralnicze",
+  
+  "amenity_bar": "Bar",
+  "amenity_kidsClub": "Klub dla dzieci",
+  "amenity_beachAccess": "Bezpośredni доступ do plaży",
+  "amenity_roomService": "Obsługa pokojowa",
+  "searchRequired": "Wprowadź cel podróży i daty pobytu przed przejściem do szczegółów hotelu"
   },
   "Checkout": {
     "pageTitle": "Tylko jeden krok dzieli Cię od podróży",
@@ -727,6 +747,13 @@
     "pages": {
       "carBooking": "Rezerwacja samochodów",
       "hotelBooking": "Rezerwacja hoteli"
-    }
+    },
+  "suggestions": {
+    "title": "Możesz zapytać mnie o coś takiego:",
+    "diffFastTrackLemozeen": "Jaka jest różnica między Fast Track a limuzyną?",
+    "whatIsLemozeen": "Czym jest usługa limuzyny?",
+    "whatIsFastTrack": "Czym jest usługa Fast Track?",
+    "bestHotels": "Jakie są najlepsze hotele w Waszej офercie?"
+  }
   }
 }

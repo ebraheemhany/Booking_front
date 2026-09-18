@@ -53,7 +53,7 @@ export default function SideMenu({
         side="right"
         className="w-75 border-l border-[#C9A96E]/20 bg-[#0B1E3D] p-0 text-white [&>button]:hidden "
       >
-        <div className="flex h-full flex-col">
+        <div className="flex h-full min-h-0 flex-col overflow-y-auto">
           {/* Header جوه المنيو */}
           <div className="flex items-center justify-between border-b border-[#C9A96E]/15 px-6 py-6">
             <span className="font-display text-2xl font-semibold tracking-wide text-[#C9A96E]">

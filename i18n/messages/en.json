@@ -204,7 +204,7 @@
     "services": {
       "airportPickup": "Meet-and-Greet and Fast Track at Cairo Airport",
       "privateDriver": "Your Personal Driver — Professional and English-Speaking",
-      "curatedStays": "Carefully Selected Accommodations from EasyRent",
+      "curatedStays": "Carefully Selected Accommodations from Masar",
       "singlePayment": "One confirmation and one amount"
     }
   },
@@ -586,7 +586,28 @@
     "noChargeYet": "You won't be charged yet",
     "contactConcierge": "Chat with Concierge on WhatsApp",
     "guestsSummary": "{adults, plural, one {1 adult} other {# adults}}{children, plural, =0 {} one {, 1 child} other {, # children}}",
-    "nightsCount": "{count, plural, one {1 night} other {# nights}}"
+    
+    "nightsCount": "{count, plural, one {1 night} other {# nights}}",
+    "amenity_wifi": "Free Wi-Fi",
+  "amenity_pool": "Swimming pool",
+  "amenity_parking": "Parking",
+  "amenity_petFriendly": "Pet-friendly",
+  "amenity_gym": "Gym",
+  "amenity_spa": "Spa",
+  
+  "amenity_airConditioning": "Air conditioning",
+  "amenity_seaView": "Sea view",
+  "amenity_kitchen": "Kitchen",
+  "amenity_tv": "TV",
+  "amenity_workspace": "Workspace",
+  "amenity_elevator": "Elevator",
+  "amenity_laundry": "Laundry service",
+
+  "amenity_bar": "Bar",
+  "amenity_kidsClub": "Kids club",
+  "amenity_beachAccess": "Direct beach access",
+  "amenity_roomService": "Room service",
+  "searchRequired": "Please enter your destination and stay dates before opening hotel details"
   },
   "Checkout": {
     "pageTitle": "One step away from your trip",
@@ -722,6 +743,14 @@
     "pages": {
       "carBooking": "Car Rental",
       "hotelBooking": "Hotel Booking"
-    }
+    },
+      "suggestions": {
+    "title": "You can ask me something like:",
+    "diffFastTrackLemozeen": "What is the difference between Fast Track and Limousine?",
+    "whatIsLemozeen": "What is the Limousine service?",
+    "whatIsFastTrack": "What is the Fast Track service?",
+    "bestHotels": "What are the best hotels you offer?"
   }
+  }
+
 }

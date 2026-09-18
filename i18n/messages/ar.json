@@ -85,7 +85,7 @@
 
   "HeroSections": {
     "stays": {
-      "badge": "ليالي القاهرة — شريك الإقامات Masar",
+      "badge": "Masar — شريك الإقامات",
       "title": "الإقامات مِنْ",
       "description": "فنادق وفلل وشقق منتقاة في كل أنحاء مصر — بإدارة Masar، وحجز في دقائق.",
       "cta": "اكتشف الإقامات",
@@ -215,7 +215,7 @@
     "services": {
       "airportPickup": "استقبال ومسار سريع في مطار القاهرة",
       "privateDriver": "سائقك الخاص — محترف ويتحدث الإنجليزية",
-      "curatedStays": "إقامات مختارة بعناية من EasyRent",
+      "curatedStays": "إقامات مختارة بعناية من Masar",
       "singlePayment": "تأكيد واحد ومبلغ واحد"
     }
   },
@@ -565,9 +565,9 @@
     "amenity_checkoutHour": "ميعاد المغادرة",
     "amenity_checkinHour": "ميعاد الوصول",
     "amenity_hotelSafe": "خزنة",
-    "amenity_breakfast": "إفطار",
+   
     "amenity_reception24": "استقبال 24 ساعة",
-    "amenity_restaurant": "مطعم",
+   
     "clearAll": "مسح الكل",
     "showResults": "عرض النتائج ({count})",
     "filter": "تصفية",
@@ -594,7 +594,28 @@
     "noChargeYet": "لن يتم خصم أي مبلغ الآن",
     "contactConcierge": "تحدث إلى الكونسيرج عبر واتساب",
     "guestsSummary": "{adults} بالغين، {children} أطفال",
-    "nightsCount": "{count, plural, =1 {ليلة واحدة} =2 {ليلتان} few {# ليالٍ} many {# ليلة} other {# ليلة}}"
+    "nightsCount": "{count, plural, =1 {ليلة واحدة} =2 {ليلتان} few {# ليالٍ} many {# ليلة} other {# ليلة}}",
+    "amenity_wifi": "واي فاي مجاني",
+"amenity_pool": "حمام سباحة",
+"amenity_parking": "موقف سيارات",
+"amenity_petFriendly": "يسمح بالحيوانات الأليفة",
+"amenity_gym": "صالة رياضية",
+"amenity_spa": "سبا",
+"amenity_breakfast": "إفطار متاح",
+"amenity_airConditioning": "تكييف",
+"amenity_seaView": "إطلالة على البحر",
+"amenity_kitchen": "مطبخ",
+"amenity_tv": "تلفزيون",
+"amenity_workspace": "مساحة عمل",
+"amenity_elevator": "أسانسير",
+"amenity_laundry": "خدمة غسيل",
+"amenity_restaurant": "مطعم",
+"amenity_bar": "بار",
+"amenity_kidsClub": "نادي أطفال",
+"amenity_beachAccess": "وصول مباشر للشاطئ",
+"amenity_roomService": "خدمة الغرف",
+"searchRequired": "من فضلك دخّل الوجهة وتواريخ الإقامة الأول قبل ما تفتح تفاصيل الفندق"
+
   },
   "Checkout": {
     "pageTitle": "خطوة وحدة تفصلك عن رحلتك",
@@ -731,7 +752,15 @@
     "pages": {
       "carBooking": "حجز العربيات",
       "hotelBooking": "حجز الفنادق"
-    }
+    },
+    "suggestions": {
+  "title": "ممكن تسألني حاجة زي:",
+  "diffFastTrackLemozeen": "إيه الفرق بين الفاست تراك والليموزين؟",
+  "whatIsLemozeen": "إيه هي خدمة الليموزين؟",
+  "whatIsFastTrack": "إيه هي خدمة الفاست تراك؟",
+  "bestHotels": "إيه أفضل الفنادق الموجودة عندكم؟"
+}
   
 }
+
 }

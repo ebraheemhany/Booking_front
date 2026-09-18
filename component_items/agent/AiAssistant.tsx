@@ -42,6 +42,14 @@ const hotelList = mockHotelDetails;
 
 const EXCLUDED_PATH_SEGMENTS = ["/auth", "/login", "/signup", "/register"];
 
+// ← مفاتيح الأسئلة المقترحة اللي بتظهر أول ما المستخدم يفتح الشات
+const SUGGESTION_KEYS = [
+  "diffFastTrackLemozeen",
+  "whatIsLemozeen",
+  "whatIsFastTrack",
+  "bestHotels",
+] as const;
+
 export function AiAssistant() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -280,9 +288,12 @@ export function AiAssistant() {
     }
   };
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
-    const userMessage: Message = { role: "user", content: input };
+  // ← بقت تقبل نص جاهز اختياري، عشان أسئلة الاقتراحات تقدر تبعت من غير ما تعدي على input
+  const sendMessage = async (overrideText?: string) => {
+    const textToSend = overrideText ?? input;
+    if (!textToSend.trim()) return;
+
+    const userMessage: Message = { role: "user", content: textToSend };
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput("");
@@ -324,6 +335,11 @@ export function AiAssistant() {
     }
   };
 
+  // ← الضغط على سؤال مقترح بيبعته فورًا زي ما لو المستخدم كتبه وضغط إرسال
+  const handleSuggestionClick = (question: string) => {
+    sendMessage(question);
+  };
+
   if (isExcludedPage) {
     return null;
   }
@@ -352,6 +368,27 @@ export function AiAssistant() {
       </div>
 
       <div className="flex-1 space-y-3 overflow-y-auto p-4">
+        {/* ← الأسئلة المقترحة، بتظهر بس أول ما الشات يكون فاضي */}
+        {messages.length === 0 && !isLoading && (
+          <div className="flex h-full flex-col justify-end gap-2 pb-1">
+            <p className="mb-1 text-xs text-white/40">
+              {t("suggestions.title")}
+            </p>
+            {SUGGESTION_KEYS.map((key) => {
+              const question = t(`suggestions.${key}`);
+              return (
+                <button
+                  key={key}
+                  onClick={() => handleSuggestionClick(question)}
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-start text-sm text-white/80 transition-colors hover:border-amber-400/40 hover:bg-white/10 hover:text-white"
+                >
+                  {question}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
         {messages.map((m, i) => (
           <div
             key={i}
@@ -385,7 +422,7 @@ export function AiAssistant() {
           }}
           placeholder={t("inputPlaceholder")}
           rows={1}
-          className="max-h-32 flex-1 resize-none overflow-y-auto rounded-lg bg-white/5 px-3 py-2 text-sm text-white placeholder:text-amber-200/40 focus:outline-none"
+          className="max-h-32 flex-1 resize-none overflow-y-auto rounded-lg bg-white/5 px-3 py-2 text-sm text-white placeholder:text-foreground focus:outline-none"
           onInput={(e) => {
             const el = e.currentTarget;
             el.style.height = "auto";
@@ -393,7 +430,7 @@ export function AiAssistant() {
           }}
         />
         <button
-          onClick={sendMessage}
+          onClick={() => sendMessage()}
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-500 text-black hover:bg-amber-400"
         >
           <Send className="h-4 w-4" />

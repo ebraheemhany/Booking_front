@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "@/i18n/navigation";
 
 import { useConvertedPrice } from "@/hooks/useConvertedPrice";
 
@@ -15,6 +15,7 @@ interface OfferCardProps {
   priceFrom: number;
   priceUnit: string;
   ctaLabel: string;
+  bookingHref: string;
 }
 
 export function HotelCard({
@@ -27,13 +28,14 @@ export function HotelCard({
   priceUnit,
 
   ctaLabel,
+  bookingHref,
 }: OfferCardProps) {
   const { convertedPrice, currency } = useConvertedPrice(priceFrom);
   return (
     <Card className="overflow-hidden border-none bg-[#101d33] p-0 text-white">
       <div className="relative h-20 w-full">
         <Image src={image} alt={title} fill className="object-cover" />
-        <Badge className="absolute end-1.5 top-1.5 bg-black/60 text-[9px] font-normal text-white backdrop-blur-sm hover:bg-black/60">
+        <Badge className="absolute end-1.5 top-1.5 bg-background text-[9px] font-normal text-foreground backdrop-blur-sm">
           {badgeLabel}
         </Badge>
       </div>
@@ -61,9 +63,12 @@ export function HotelCard({
           {currency}/{priceUnit}
         </p>
 
-        <Button className="h-7 w-full gap-1 rounded-md bg-teal-500 text-xs font-medium text-white hover:bg-teal-600">
+        <Link
+          className="flex h-7 w-full items-center justify-center gap-1 rounded-md bg-teal-500 text-xs font-medium text-white hover:bg-teal-600"
+          href={bookingHref}
+        >
           {ctaLabel}
-        </Button>
+        </Link>
       </div>
     </Card>
   );

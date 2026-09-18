@@ -7,10 +7,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "القاهرة", en: "Cairo" },
     roomType: "hotel",
     stars: 4,
-    image: "/image/hotels/hotel1.jpg",
+    image: "/image/hotal_4.jpg",
     pricePerNight: 2200,
     amenities: ["luggageRoom", "liftAccess", "breakfast", "reception24", "hotelSafe"],
-    images: ["/image/hotels/hotel1.jpg"],
+    images: [
+  "/image/hotal_1.avif",
+  "/image/hotal_2.jpg",
+  "/image/hotal_prack_1.jfif",
+  "/image/hotal_prack_3.webp",
+],
     facilities: ["luggageRoom", "liftAccess", "breakfast", "reception24", "hotelSafe"],
     rooms: [
       {
@@ -41,10 +46,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "الساحل الشمالي", en: "North Coast" },
     roomType: "chalet",
     stars: 5,
-    image: "/image/hotels/hotel2.jpg",
+    image: "/image/hotal_5.webp",
     pricePerNight: 3500,
     amenities: ["liftAccess", "restaurant"],
-    images: ["/image/hotels/hotel2.jpg"],
+    images: [
+      "/image/hotal_1.avif",
+      "/image/hotal_2.jpg",
+      "/image/hotal_prack_1.jfif",
+      "/image/hotal_prack_3.webp",
+    ],
     facilities: ["liftAccess", "restaurant"],
     rooms: [
       {
@@ -65,10 +75,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "الغردقة", en: "Hurghada" },
     roomType: "resort",
     stars: 5,
-    image: "/image/hotels/hotel3.jpg",
+    image: "/image/hotal_7.jfif",
     pricePerNight: 4800,
     amenities: ["swimmingPool", "beachfront", "breakfast", "wifi", "spa"],
-    images: ["/image/hotels/hotel3.jpg"],
+    images: [
+  "/image/hotal_1.avif",
+  "/image/hotal_2.jpg",
+  "/image/hotal_prack_1.jfif",
+  "/image/hotal_prack_3.webp",
+],
     facilities: ["swimmingPool", "beachfront", "breakfast", "wifi", "spa"],
     rooms: [
       {
@@ -99,11 +114,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "الجيزة", en: "Giza" },
     roomType: "hotel",
     stars: 4,
-    image: "/image/hotels/hotel4.jpg",
+    image: "/image/hotal_8.jfif",
     pricePerNight: 1950,
     amenities: ["freeParking", "airportShuttle", "reception24", "breakfast"],
-    images: ["/image/hotels/hotel4.jpg"],
-    facilities: ["freeParking", "airportShuttle", "reception24", "breakfast"],
+images: [
+  "/image/hotal_1.avif",
+  "/image/hotal_2.jpg",
+  "/image/hotal_prack_1.jfif",
+  "/image/hotal_prack_3.webp",
+],    facilities: ["freeParking", "airportShuttle", "reception24", "breakfast"],
     rooms: [
       {
         id: "r4-1",
@@ -123,10 +142,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "أسوان", en: "Aswan" },
     roomType: "hotel",
     stars: 3,
-    image: "/image/hotels/hotel5.jpg",
+    image: "/image/hotal_10.jfif",
     pricePerNight: 1200,
     amenities: ["riverView", "breakfast", "restaurant", "airConditioning"],
-    images: ["/image/hotels/hotel5.jpg"],
+    images: [
+  "/image/hotal_1.avif",
+  "/image/hotal_2.jpg",
+  "/image/hotal_prack_1.jfif",
+  "/image/hotal_prack_3.webp",
+],
     facilities: ["riverView", "breakfast", "restaurant", "airConditioning"],
     rooms: [
       {
@@ -147,10 +171,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "مرسى مطروح", en: "Marsa Matrouh" },
     roomType: "hotel",
     stars: 4,
-    image: "/image/hotels/hotel6.jpg",
-    pricePerNight: 2800,
+     image: "/image/hotal_8.jfif",
+     pricePerNight: 2800,
     amenities: ["beachfront", "swimmingPool", "liftAccess", "restaurant"],
-    images: ["/image/hotels/hotel6.jpg"],
+   images: [
+  "/image/hotal_1.avif",
+  "/image/hotal_2.jpg",
+  "/image/hotal_prack_1.jfif",
+  "/image/hotal_prack_3.webp",
+],
     facilities: ["beachfront", "swimmingPool", "liftAccess", "restaurant"],
     rooms: [
       {
@@ -171,10 +200,15 @@ export const mockHotelDetails: HotelDetails[] = [
     location: { ar: "دهب", en: "Dahab" },
     roomType: "hotel",
     stars: 3,
-    image: "/image/hotels/hotel7.jpg",
-    pricePerNight: 850,
+ image: "/image/hotal_8.jfif",
+     pricePerNight: 850,
     amenities: ["wifi", "petFriendly", "beachfront"],
-    images: ["/image/hotels/hotel7.jpg"],
+    images: [
+  "/image/hotal_1.avif",
+  "/image/hotal_2.jpg",
+  "/image/hotal_prack_1.jfif",
+  "/image/hotal_prack_3.webp",
+],
     facilities: ["wifi", "petFriendly", "beachfront"],
     rooms: [
       {

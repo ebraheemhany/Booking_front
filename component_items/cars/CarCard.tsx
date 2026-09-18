@@ -165,13 +165,13 @@ export function CarCard({
           className="object-cover"
         />
 
-        <span className="absolute end-3 top-3 rounded-md bg-black/70 px-3 py-1 text-xs font-bold text-white backdrop-blur-sm">
+        <span className="absolute end-3 top-3 rounded-md bg-black/70 px-3 py-1 text-xs font-bold text-destructive-foreground backdrop-blur-sm">
           {tFilters(categoryLabelKey[specs.category] ?? "categoryAll")}
         </span>
 
         <button
           onClick={() => onViewSpecs(specs.id)}
-          className="absolute bottom-3 start-3 flex items-center gap-1.5 rounded-full bg-black/70 px-3 py-1.5 text-xs text-white backdrop-blur-sm transition-colors hover:bg-black/90"
+          className="absolute bottom-3 start-3 flex items-center gap-1.5 rounded-full bg-black/70 px-3 py-1.5 text-xs text-destructive-foreground backdrop-blur-sm transition-colors hover:bg-black/90"
         >
           <List className="h-3.5 w-3.5" />
           {t("viewSpecs")}
@@ -213,7 +213,7 @@ export function CarCard({
           {whatsappButton}
           <Button
             onClick={() => onBookNow(specs.id)}
-            className="h-11 flex-1 gap-2 bg-white font-bold text-black hover:bg-white/90"
+            className="h-11 flex-1 gap-2 bg-white font-bold text-foreground hover:bg-white/90"
           >
             <Mail className="h-4 w-4" />
             {t("bookNow")}

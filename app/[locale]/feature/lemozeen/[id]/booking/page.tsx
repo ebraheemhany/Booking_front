@@ -12,6 +12,7 @@ import {
 } from "@/component_items/booking/TripDetailsStep";
 import { BookingReviewStep } from "@/component_items/booking/BookingReviewStep";
 import type { CarSpecs } from "@/component_items/cars/CarCard";
+import { mockCars } from "@/data/mockCars";
 
 import type { RootState } from "@/store/store";
 
@@ -41,8 +42,10 @@ export default function BookingPage() {
   const allowedTripTypes: TripType[] | undefined =
     bookingData.source === "fastTrack" ? ["arrival", "departure"] : undefined;
 
-  // العربية المختارة جايه من Redux بدل الـ mock الثابت
-  const selectedCar: CarSpecs | null = bookingData.selectedCar?.specs ?? null;
+  const selectedCar: CarSpecs | null =
+    mockCars.find((car) => car.specs.id === carId)?.specs ??
+    bookingData.selectedCar?.specs ??
+    null;
 
   const canProceedToMap = Boolean(
     tripData.tripType &&

@@ -21,6 +21,7 @@ import type { AppDispatch } from "@/store/store";
 import { setStaySearchData } from "@/store/slices/staySearchSlice";
 // import { AiAssistant } from "@/component_items/agent/AiAssistant";
 import { useRegisterAiHandlers } from "@/component_items/agent/AiAssistantContext";
+import { SignInBanner } from "@/component_items/SignInBanner";
 
 const mockHotels: HotelCardData[] = mockHotelDetails.map((h) => ({ specs: h }));
 
@@ -214,23 +215,17 @@ export default function StaysPage() {
       <div className="mx-auto my-4 w-[90%]">
         <StaySearchBar onSearch={handleSearch} />
       </div>
-      <div className="h-[1px] w-full bg-border mx-auto" />
+      <div className="h-px w-full bg-border mx-auto" />
 
-      {searchData && (
-        <div className="mx-auto my-4 w-[90%]">
-          <StayResultsPage
-            hotels={mockHotels}
-            filters={filters}
-            onFiltersChange={setFilters}
-          />
-        </div>
-      )}
-
-      {/* <AiAssistant
-        onRecommendHotels={handleRecommendHotels}
-        onSelectHotel={handleSelectHotel}
-        onSelectRoom={handleSelectRoom}
-      /> */}
+      <div className="mx-auto my-4 w-[90%]">
+        <StayResultsPage
+          hotels={mockHotels}
+          filters={filters}
+          onFiltersChange={setFilters}
+          destination={searchData?.destination?.label}
+        />
+      </div>
+      <SignInBanner />
     </div>
   );
 }
