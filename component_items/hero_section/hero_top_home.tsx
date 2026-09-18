@@ -485,7 +485,7 @@ function useSections(): HeroSectionData[] {
           ctaLabel: t("travel.offers.cairoPickup.ctaLabel"),
         },
         {
-          image: "/image/air_2.jfif",
+          image: "/image/air_2.jpg",
           badgeLabel: t("travel.offers.borgElArabDropoff.badgeLabel"),
           title: t("travel.offers.borgElArabDropoff.title"),
           subtitle: t("travel.offers.borgElArabDropoff.subtitle"),

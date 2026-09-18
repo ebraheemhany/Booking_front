@@ -28,7 +28,7 @@ const mockCars: CarCardData[] = [
       id: "1",
       name: { ar: "شانجان CS55", en: "Changan CS55" },
       category: "comfort",
-      image: "/image/cars/changan-cs55.webp",
+      image: "/image/car_1.webp",
       seats: 4,
       luggage: 2,
       hasPrivateDriver: true,
@@ -47,7 +47,7 @@ const mockCars: CarCardData[] = [
       id: "2",
       name: { ar: "شانجان CS55", en: "Changan CS55" },
       category: "comfort",
-      image: "/image/cars/changan-cs55.webp",
+      image: "/image/car_1.webp",
       seats: 4,
       luggage: 2,
       hasPrivateDriver: true,
@@ -294,8 +294,7 @@ export default function FastTrackPage() {
       const maxBudget = criteria.maxBudget;
       candidates = candidates.filter(
         (car) =>
-          (car.pricing[criteria.tripType]?.price ?? Infinity) <=
-          maxBudget,
+          (car.pricing[criteria.tripType]?.price ?? Infinity) <= maxBudget,
       );
     }
 
