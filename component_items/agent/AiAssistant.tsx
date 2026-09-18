@@ -356,7 +356,7 @@ export function AiAssistant() {
   }
 
   return (
-    <div className="fixed bottom-6 inset-e-6 z-50 flex h-125 w-96 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0d1728] shadow-2xl">
+    <div className="fixed bottom-4 inset-x-4 z-50 flex h-[min(70dvh,31rem)] w-auto flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0d1728] shadow-2xl sm:inset-x-auto sm:bottom-6 sm:inset-e-6 sm:h-125 sm:w-96">
       <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
         <p className="flex items-center gap-2 text-sm font-bold text-white">
           <Sparkles className="h-4 w-4 text-amber-400" />
