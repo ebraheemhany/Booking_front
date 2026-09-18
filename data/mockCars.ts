@@ -23,18 +23,18 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "2",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
-      category: "comfort",
-      image: "/image/car_1.webp",
-      seats: 4,
-      luggage: 2,
+      name: { ar: "تويوتا فورتشنر", en: "Toyota Fortuner" },
+      category: "family",
+      image: "/image/car_2.webp",
+      seats: 7,
+      luggage: 4,
       hasPrivateDriver: true,
       wheelchairAccessible: false,
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 3900 },
+      departure: { price: 3700 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
@@ -42,9 +42,9 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "3",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
-      category: "comfort",
-      image: "/image/car_4.jpg",
+      name: { ar: "مرسيدس C200", en: "Mercedes C200" },
+      category: "vip",
+      image: "/image/car_3.jfif",
       seats: 4,
       luggage: 2,
       hasPrivateDriver: true,
@@ -52,8 +52,8 @@ export const mockCars: CarCardData[] = [
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 5200 },
+      departure: { price: 4900 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
@@ -61,8 +61,8 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "4",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
-      category: "comfort",
+      name: { ar: "شيفروليه أوبترا", en: "Chevrolet Optra" },
+      category: "standard",
       image: "/image/car_4.jpg",
       seats: 4,
       luggage: 2,
@@ -71,8 +71,8 @@ export const mockCars: CarCardData[] = [
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 2500 },
+      departure: { price: 2300 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
@@ -80,9 +80,9 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "5",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
+      name: { ar: "هيونداي إلنترا", en: "Hyundai Elantra" },
+      image: "/image/car_1.webp",
       category: "comfort",
-      image: "/image/car_4.jpg",
       seats: 4,
       luggage: 2,
       hasPrivateDriver: true,
@@ -90,8 +90,8 @@ export const mockCars: CarCardData[] = [
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 2700 },
+      departure: { price: 2500 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
@@ -99,18 +99,18 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "6",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
-      category: "comfort",
-      image: "/image/car_4.jpg",
-      seats: 4,
-      luggage: 2,
+      name: { ar: "كيا سبورتاج", en: "Kia Sportage" },
+      category: "family",
+      image: "/image/car_2.webp",
+      seats: 5,
+      luggage: 3,
       hasPrivateDriver: true,
       wheelchairAccessible: false,
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 3500 },
+      departure: { price: 3300 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
@@ -118,9 +118,9 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "7",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
-      category: "comfort",
-      image: "/image/car_4.jpg",
+      name: { ar: "بي إم دبليو الفئة الخامسة", en: "BMW 5 Series" },
+      category: "vip",
+      image: "/image/car_3.jfif",
       seats: 4,
       luggage: 2,
       hasPrivateDriver: true,
@@ -128,8 +128,8 @@ export const mockCars: CarCardData[] = [
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 6500 },
+      departure: { price: 6200 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
@@ -137,8 +137,8 @@ export const mockCars: CarCardData[] = [
   {
     specs: {
       id: "8",
-      name: { ar: "شانجان CS55", en: "Changan CS55" },
-      category: "comfort",
+      name: { ar: "نيسان صني", en: "Nissan Sunny" },
+      category: "standard",
       image: "/image/car_4.jpg",
       seats: 4,
       luggage: 2,
@@ -147,8 +147,8 @@ export const mockCars: CarCardData[] = [
       whatsappNumber: "201234567890",
     },
     pricing: {
-      arrival: { price: 3300 },
-      departure: { price: 3100 },
+      arrival: { price: 2200 },
+      departure: { price: 2000 },
       private: { price: 250, hoursIncluded: 12, kmIncluded: 150 },
       dailyRental: { price: 2800 },
     },
